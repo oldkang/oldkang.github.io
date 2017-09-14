@@ -8,6 +8,7 @@ body{
 	overflow: hidden;
 	background:url(../img/bg-4k.jpg) repeat-x center center ;
 	background-size: cover;
+	background-color: #d6c9b5;
 }
 ul,li,p{
 	margin: 0;

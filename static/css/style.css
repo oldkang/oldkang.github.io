@@ -13,3 +13,11 @@ nav a{
     display: inline-block;
     padding: 0 10px;
 }
+.resume{
+    width: 840px;
+    margin: 20px auto;
+}
+.resume header{
+    height: 145px;
+    background: url("../images/top_bg.jpg") no-repeat center;
+}
