@@ -100,12 +100,12 @@ address span{
 	color:#6ecadc;
 }
 .company {
-	margin:2em 0;
+	margin:0 0 2em 0;
 }
 .company h3{
   color: #FFF;
   padding: 5px 41px 5px 30px;
-  display: inline-block;
+  display: inline-block;font-size: 22px;
 }
 .skills h3{
   color: #FFF;
@@ -286,7 +286,7 @@ h3.clr3{
 .company_details h6, .education_details h6 {
   font-size: 0.8em;
 }
-.company_details p, .skill_info p, .education_details p {
+.company_details p, .skill_info p, .education_details p,.company_details dl ul {
   font-size: 0.8em;
 }
 .cmpny1 {
@@ -334,8 +334,8 @@ address span {
 	margin-right:5%;
 }
 .details{
-	width:30%;
-	float:right;
+	width:60%;
+	float:left;
 }
 }
 @media (max-width: 640px){
@@ -352,8 +352,8 @@ address span {
 	margin-right:5%;
 }
 .details{
-	width:30%;
-	float:right;
+	width:60%;
+	float:left;
 }
 .sidebar img{
 	width:100%;
@@ -544,3 +544,58 @@ address span {
   padding-left: 1.5em;
 }
 }
+/* 项目链接地址 */
+.projectLink{
+    margin-top: 0px;
+}
+p.projectLink,.projectLink a{
+    color: #4eb174;
+}
+.projectLink a{
+    font-weight: bold;
+}
+
+/* 项目 介绍 */
+
+.company_details dl{ margin-bottom: 10px }
+.company_details dt{ font-weight: normal }
+.company_details dl ul{
+    font-weight: 300;
+    margin-left: 20px ;
+    color: #999;
+}
+.company_details dl ul b{
+    color: #de9292;
+}
+
+.hide_code{
+    position: relative;
+}
+.hide_code img{ display: none;}
+.hide_code:hover img{
+    display: block;
+    position: absolute;
+    right: -50px;
+    top:30px;
+}
+
+@media (min-width: 737px){
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+h3.clr4{
+    background: #828282;
+}
+
+
+
+
