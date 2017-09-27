@@ -284,10 +284,10 @@ h3.clr3{
   font-size: 1.1em;
 }
 .company_details h6, .education_details h6 {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .company_details p, .skill_info p, .education_details p,.company_details dl ul {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .cmpny1 {
   padding-bottom: 1.5em;
@@ -565,7 +565,7 @@ p.projectLink,.projectLink a{
     color: #999;
 }
 .company_details dl ul b{
-    color: #de9292;
+    color: #de4040;
 }
 
 .hide_code{
@@ -596,6 +596,8 @@ h3.clr4{
     background: #828282;
 }
 
-
+li.gray{
+    color: #999;
+}
 
 
