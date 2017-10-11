@@ -248,6 +248,7 @@ h3.clr3{
     }
     .company_details h6, .education_details h6 {
         font-size: .9em;
+        background: red;
     }
     .company_details p, .skill_info p, .education_details p,.company_details dl ul {
         font-size: .9em;
