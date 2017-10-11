@@ -24,6 +24,9 @@ a:focus {
   outline-offset: 0px;
   text-decoration:none;
 }
+h5{
+    font-size: 16px;
+}
 /*-- header_top --*/
 .sidebar{
     background:#484848;
@@ -55,12 +58,12 @@ a:focus {
 
 .details p{
     color: #ffffff;
-	font-size:0.9em;
+	font-size:0.9rem;
 	margin:5px 0 2em 0;
 }
 .details p a{
 	color:#fff;
-	font-size:0.9em;
+	font-size:0.9rem;
 }
 address h3{
 	margin-bottom:5px;
@@ -104,7 +107,7 @@ address span{
 }
 .company h3{
   color: #FFF;
-  padding: 5px 51px 5px 30px;
+  padding: 5px 38px 5px 30px;
   display: inline-block;
     /*font-size: 22px;*/
 }
@@ -133,7 +136,7 @@ address span{
 .company_details h6,.education_details h6{
 	/*font-weight:400;*/
 	margin-bottom:1em;
-	font-size:0.9em;
+	font-size:0.9rem;
 }
 .company_details p,.skill_info p,.education_details p{
 	color:#999;
@@ -173,14 +176,15 @@ address span{
 .education  h3{
   background: #999;
   color: #FFF;
-  padding: 5px 190px 5px 30px;
+  padding: 5px 38px 5px 30px;
   display: inline-block;
 }
 h3.clr1{
 	background:#5bc0de;
 }
 h3.clr2{
-	background:#f0ad4e;padding-right: 158px;
+	background:#f0ad4e;
+
 }
 h3.clr3{
 	background:#5cb85c;
@@ -626,7 +630,7 @@ li.gray{
     margin-left: 2rem;
     border-bottom: 1px solid #eee;
     line-height: 28px;
-    /*font-size: small;*/
+    font-size: .9rem;
     color: #666;
  }
 
