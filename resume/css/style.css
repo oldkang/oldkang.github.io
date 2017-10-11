@@ -4,7 +4,7 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0; padding:0;}
 p {margin: 0;}
 html, body{
-	/*font-family: 'Ubuntu', sans-serif;*/
+	font-family: Microsoft YaHei, STHeiti, sans-serif;
 	font-size: 100%;
 	background: #f7f7f7;
 }
@@ -291,10 +291,10 @@ h3.clr3{
   font-size: 1.1em;
 }
 .company_details h6, .education_details h6 {
-  font-size: .9em;
+  font-size: .9rem;
 }
 .company_details p, .skill_info p, .education_details p,.company_details dl ul {
-  font-size: .9em;
+  font-size: .9rem;
 }
 .cmpny1 {
   padding-bottom: 1.5em;
