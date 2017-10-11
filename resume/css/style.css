@@ -4,7 +4,7 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0; padding:0;}
 p {margin: 0;}
 html, body{
-	font-family: 'Ubuntu', sans-serif;
+	/*font-family: 'Ubuntu', sans-serif;*/
 	font-size: 100%;
 	background: #f7f7f7;
 }
@@ -316,7 +316,7 @@ h3.clr3{
   font-size: 0.75em;
 }
 address span {
-  font-size: 0.8em;
+  /*font-size: 0.8em;*/
 }
 .contact-grid input[type="text"], .contact-grid textarea {
   width: 100%;
@@ -480,9 +480,9 @@ address {
 .company h3, .skills h3, .education h3 {
   font-size: 1rem;
 }
-.skills h3 {
-  padding: 5px 98px 5px 16px;
-}
+/*.skills h3 {*/
+  /*padding: 5px 98px 5px 16px;*/
+/*}*/
 .skill1 ul, .skill2 ul {
   padding-left: 2em;
 }
@@ -493,7 +493,7 @@ address {
   padding: 0.5em 0 0 1.5em;
 }
 .education h3 {
-  padding: 5px 190px 5px 16px;
+  /*padding: 5px 190px 5px 16px;*/
 }
 .copywrite p{
 	font-size:0.7rem;
