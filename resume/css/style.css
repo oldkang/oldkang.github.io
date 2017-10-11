@@ -624,7 +624,7 @@ li.gray{
     margin-left: 2rem;
     border-bottom: 1px solid #eee;
     line-height: 28px;
-    font-size: small;
+    /*font-size: small;*/
     color: #666;
  }
 
@@ -636,7 +636,8 @@ li.gray{
 }
 
 .projectSummary{
-    font-size: smaller;line-height: 28px;
+    /*font-size: smaller;*/
+    line-height: 28px;
 }
 .projectSummary dl{
     color: #666;
