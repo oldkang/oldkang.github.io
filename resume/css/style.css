@@ -291,7 +291,7 @@ h3.clr3{
   font-size: 1.1em;
 }
 .company_details h6, .education_details h6 {
-  font-size: .9em;    font-size: 14px;
+  font-size: .9em;
 }
 .company_details p, .skill_info p, .education_details p,.company_details dl ul {
   font-size: .9em;
