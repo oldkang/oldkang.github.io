@@ -370,7 +370,7 @@ address span {
   margin: 5px 0 1em 0;
 }
 .details h3 {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 }
 @media (max-width: 600px){
@@ -387,7 +387,7 @@ address {
 @media (max-width: 568px){
 .details_header ul li a {
   padding: 0 0.5em;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 }
 @media (max-width: 480px){
@@ -400,13 +400,13 @@ address {
 }
 .details_header ul li a {
   padding: 0 0.5em;
-  font-size: 0.85em;
+  font-size: 0.85rem;
 }
 .details {
   width: 36%;
 }
 .sidebar h1 {
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 .sidebar_top {
   width: 38%;
@@ -436,7 +436,7 @@ address {
 }
 .details_header ul li a {
   padding: 0 0.3em;
-  font-size: 0.75em;
+  font-size: 0.75rem;
 }
 .skill1 ul, .skill2 ul {
   padding-left: 3em;
@@ -444,7 +444,7 @@ address {
 }
 @media (max-width: 384px){
 .sidebar h1 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 .details {
   width: 45%;
@@ -454,7 +454,7 @@ address {
 }
 .details_header ul li a {
   padding: 0 1em;
-  font-size: 0.75em;
+  font-size: 0.75rem;
 }
 .main {
   padding: 1em 0 2em 0;
@@ -466,10 +466,10 @@ address {
   padding: 5px 41px 5px 16px;
 }
 .company_details h4, .education_details h4 {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 .company_details h6, .education_details h6 {
-  font-size: 0.6em;
+  font-size: 0.6rem;
 }
 .company {
   margin: 1em 0;
@@ -478,7 +478,7 @@ address {
   margin: 1em 0;
 }
 .company h3, .skills h3, .education h3 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 .skills h3 {
   padding: 5px 98px 5px 16px;
@@ -487,7 +487,7 @@ address {
   padding-left: 2em;
 }
 .skill1 ul li, .skill2 ul li {
-  font-size: 0.75em;
+  font-size: 0.75rem;
 }
 .skill_list {
   padding: 0.5em 0 0 1.5em;
@@ -496,12 +496,12 @@ address {
   padding: 5px 190px 5px 16px;
 }
 .copywrite p{
-	font-size:0.7em;
+	font-size:0.7rem;
 }
 }
 @media (max-width: 375px){
 .sidebar h1 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 .sidebar img {
   width: 70%;
@@ -510,11 +510,11 @@ address {
   font-size: 0.8em;
 }
 .details p {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   margin: 5px 0 0.5em 0;
 }
 address span {
-  font-size: 0.7em;
+  font-size: 0.7rem;
 }
 .sidebar {
   padding: 1.5em 17px 1em 17px;
@@ -524,7 +524,7 @@ address span {
   text-align: center;
 }
 .details_header ul li a {
-  line-height: 2em;
+  line-height: 2rem;
 }
 }
 @media (max-width: 320px){
@@ -535,20 +535,20 @@ address span {
   width: 80%;
 }
 .details h3 {
-  font-size: 0.7em;
+  font-size: 0.7rem;
 }
 .content {
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 .details_header ul li a {
-  padding: 0 0.5em;
-  font-size: 0.75em;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
 }
 .skill1 h4, .skill2 h4 {
-  font-size: 0.85em;
+  font-size: 0.85rem;
 }
 .skill1 ul, .skill2 ul {
-  padding-left: 1.5em;
+  padding-left: 1.5rem;
 }
 }
 /* 项目链接地址 */
@@ -568,7 +568,8 @@ p.projectLink,.projectLink a{
 .company_details dl{ margin-bottom: 10px }
 .company_details dt{ font-weight: normal }
 .company_details dl ul{
-    /*font-weight: 300;*/line-height: 30px;
+    /*font-weight: 300;*/
+    line-height: 30px;
     margin-left: 20px ;
     color: #999;
 }
@@ -613,7 +614,7 @@ li.gray{
 }
 
 .tree > ul{
-    margin-left: 2rem;
+    margin-left: 2em;
     margin-top: 10px;
     margin-bottom: 10px;
 }
