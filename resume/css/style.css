@@ -119,7 +119,7 @@ address span{
 .company_details h4,.education_details h4{
 	color:#333;
 	font-weight:600;
-	font-size:1.2em;
+	/*font-size:1.2em;*/
 	margin-bottom:6px;
 	font-family: 'Varela Round', sans-serif;
 }
@@ -600,4 +600,47 @@ li.gray{
     color: #999;
 }
 
+.btn-primary {
+    background-color: #3c925d;
+}
+
+.tree > ul{
+    margin-left: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tree h5{
+    padding-left: 1em;
+    line-height: 25px;
+    background: #efefef;
+    color: #666;
+}
+.tree h6{
+    margin-bottom: 0;
+}
+.tree > ul li{
+    margin-left: 2rem;
+    border-bottom: 1px solid #eee;
+    line-height: 25px;
+    font-size: small;
+    color: #666;
+ }
+
+.tree > ul li:last-child{
+    border-bottom: none;
+}
+.red{
+    color: #f00;
+}
+
+.projectSummary{
+    font-size: small;
+}
+.projectSummary dl{
+    color: #666;
+}
+.projectSummary ul{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
 
