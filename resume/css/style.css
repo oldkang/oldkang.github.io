@@ -239,7 +239,7 @@ h3.clr3{
   border: none;
 }
 /*--responsive--*/
-@media (max-width: 768px){
+@media (min-width: 768px){
     .company h3,.skills h3,.education h3{
         font-size: 1.2em;
     }
