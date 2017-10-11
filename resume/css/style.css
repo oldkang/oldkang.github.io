@@ -124,19 +124,20 @@ address span{
 	font-family: 'Varela Round', sans-serif;
 }
 .company_details h4 span,.education_details h4 span{
-	font-size: 0.65em;
+	font-size: 0.85em;
   margin-left: 5px;
   color: #999;
   font-weight:400;
 }
 .company_details h6,.education_details h6{
-	font-weight:400;
+	/*font-weight:400;*/
 	margin-bottom:1em;
 	font-size:0.9em;
 }
 .company_details p,.skill_info p,.education_details p{
 	color:#999;
-	font-weight:300;
+    font-size: .9rem;
+	/*font-weight:300;*/
 	line-height:1.7em;
 }
 .cmpny1{
@@ -284,10 +285,10 @@ h3.clr3{
   font-size: 1.1em;
 }
 .company_details h6, .education_details h6 {
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 .company_details p, .skill_info p, .education_details p,.company_details dl ul {
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 .cmpny1 {
   padding-bottom: 1.5em;
@@ -561,7 +562,7 @@ p.projectLink,.projectLink a{
 .company_details dl{ margin-bottom: 10px }
 .company_details dt{ font-weight: normal }
 .company_details dl ul{
-    font-weight: 300;
+    /*font-weight: 300;*/line-height: 30px;
     margin-left: 20px ;
     color: #999;
 }
@@ -635,7 +636,7 @@ li.gray{
 }
 
 .projectSummary{
-    font-size: small;line-height: 28px;
+    font-size: smaller;line-height: 28px;
 }
 .projectSummary dl{
     color: #666;
