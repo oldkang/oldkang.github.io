@@ -146,7 +146,7 @@ address span{
 }
 .cmpny1{
 	border-bottom:2px dashed #999;
-	padding-bottom:1em;
+    margin-bottom:2em;
 }
 .skills{
 	margin:2em 0;
@@ -302,7 +302,7 @@ h3.clr3{
   font-size: .9rem;
 }
 .cmpny1 {
-  padding-bottom: 1.5em;
+  /*padding-bottom: 1.5em;*/
 }
 .skill1, .skill2 {
   float: left;
@@ -661,4 +661,13 @@ li.gray{
 
 .well-link a{
     color: #4eb174;
+}
+.moreCompany{
+    display: none;
+}
+.moreCompanyLink{
+    text-align: center;
+    color: #2eb563;
+    cursor: pointer;
+
 }

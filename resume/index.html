@@ -152,10 +152,10 @@
 						 </ul>
 					 </dd>
 				 </dl>
-				 <p class="cmpny1"></p>
 			 </div>
 
 			 <div class="company_details">
+				 <p class="cmpny1"></p>
 				 <h4>上海佰沃网络科技有限公司 <span>2016/2-2017/2 & [1年]</span> </h4>
 				 <h6>Web前端开发</h6>
 				 <dl>
@@ -164,21 +164,7 @@
 						 <p>负责公司的“校舍”app和官网的前端制作以及相关的web网站开发。</p>
 					 </dd>
 				 </dl>
-				 <!--<dl>-->
-					 <!--<dt>项目地址：</dt>-->
-					 <!--<dd>-->
-						 <!--<p class="projectLink">-->
-							 <!--&lt;!&ndash;【<a href="http://www.xiaoshe.me/" target="_blank">校舍</a>】&ndash;&gt;-->
-							 <!--【<a href="http://cug.xiaoshe.me/" target="_blank">青年文化旅行社web版</a>】-->
 
-							 <!--【<a href="javascript:;" class="hide_code">-->
-								 <!--移动端-->
-								 <!--<img src="http://cug.xiaoshe.me/static/images/cug.png" alt="">-->
-							 <!--</a>】-->
-
-						 <!--</p>-->
-					 <!--</dd>-->
-				 <!--</dl>-->
 				 <dl>
 					 <dt>工作内容：</dt>
 					 <dd>
@@ -197,10 +183,11 @@
 						 </ul>
 					 </dd>
 				 </dl>
-				 <p class="cmpny1"></p>
 			 </div>
 
+<div class="moreCompany">
 			 <div class="company_details">
+				 <p class="cmpny1"></p>
 				 <h4>上海电银信息技术有限公司<span>2013/5-2016/2  & [2年9个月]</span></h4>
 				 <h6>Web前端开发</h6>
 				 <dl>
@@ -226,10 +213,10 @@
 						 </ul>
 					 </dd>
 				 </dl>
-				 <p class="cmpny1"></p>
 			 </div>
 
 			 <div class="company_details">
+				 <p class="cmpny1"></p>
 				 <h4>长沙首超科技有限公司<span>2011/7-2013/4  & [1年9个月]</span></h4>
 				 <h6>网页设计师</h6>
 				 <dl>
@@ -254,7 +241,20 @@
 					 </dd>
 				 </dl>
 			 </div>
+</div>
+			 <div class="moreCompanyLink">
+				 <span>展开 &triangledown;</span>
+				 <span style="display: none">收起 &triangle;</span>
+			 </div>
+			 <script>
+				 $(document).ready( function () {
+                     $('.moreCompanyLink').click(function() {
+                         $(".moreCompany").toggle(500);
+                         $(".moreCompanyLink span").toggle();
+                     });
+                 })
 
+			 </script>
 		 </div>
 
 
