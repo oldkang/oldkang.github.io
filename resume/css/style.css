@@ -245,9 +245,14 @@ h3.clr3{
 /*--responsive--*/
 
 @media (max-width: 1366px){
-.sidebar h1 {
-  font-size: 2em;
+    .sidebar h1 {
+        font-size: 2em;
+    }
 }
+@media (min-width: 1366px){
+    .company_details h6 {
+        font-size: 1.2rem;
+    }
 }
 @media (max-width: 1024px){
 .sidebar {
@@ -574,7 +579,7 @@ p.projectLink,.projectLink a{
     color: #999;
 }
 .company_details dl ul b{
-    color: #de4040;
+    color: #2eb563;
 }
 
 .hide_code{
