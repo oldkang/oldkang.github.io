@@ -118,7 +118,7 @@ address span{
     font-size: 22px;
 }
 .company_details,.education_details {
-	padding:1.5em 0 0em 2em;
+	padding:1em 0 0em 2em;
 }
 .company_details h4,.education_details h4{
 	color:#333;
@@ -145,8 +145,8 @@ address span{
 	line-height:1.7em;
 }
 .cmpny1{
-	border-bottom:2px dashed #999;
-    margin-bottom:2em;
+	border-top:2px dashed #999;
+    padding-bottom:2em;
 }
 .skills{
 	margin:2em 0;
