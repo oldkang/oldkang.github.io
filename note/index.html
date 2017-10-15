@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+		
+
+<!--==========================================2017.05.08====================================-->
+1、设置自定义属性：setAttribute
+2、获取自定义属性：getAttribute
+3、移出自定义属性：removeAttribute
+
+
+单个获取：
+	document.getElementById()
+	document.querySelector()
+
+一组获取:
+	document.querySelectorAll()
+	document.getElementsByTagName()
+	document.getElementsByClassName()
+	<!--by.必须从document下获取，每次事件都会重新获取一次-->
+	<!--query 可以从父元素下获取，只获取一次-->
+
+事件:
+	onload 		加载完成之后（window、body）
+	onclick 		点击事件
+	onmouseover 	鼠标移入
+	onmouseout 	鼠标移除
+
+变量：
+	用来存储数据的一种方式（存址、存值）；
+	变量声明  var ，变量使用 直接写变量名字；
+	在哪个函数中声明的变量，就只能在这个函数中使用；
+	
+变量命名：
+	1、可以使用 字母、数字、$ 和 ‘_’;
+	2、变量命名不能以数字开头；
+	3、驼峰命名（从第二个单词开始，首字母大写）；
+	4、常量命名-字母全部大写，每个单词中间用‘_’隔开；
+	5、注意关键字和保留字不能用于变量命名；
+	
+函数：
+	1、匿名函数：没有名字的函数；
+	2、有名字的函数： 函数声明 function name(){执行语句};
+	3、函数调用：
+		事件调用：
+			el.onclick = name;
+			el.onclick = function(){};
+		直接调用：
+			name();
+	
+属性操作：
+	属性读操作（获取属性值）：obj.属性名；
+	属性写操作（设置修改属性）：obj.属性名 = 属性值；
+	
+	注意问题：
+		1、class不叫class，叫className；
+		2、style操作的是行间样式；
+		3、获取img的src是绝对路径；
+		4、获取十六进制的颜色值，获取到的是rgb样式；
+		5、获取style中复合样式时，Firefox会把所有值都获取到；
+		6、遇到‘-’，去掉‘-’ 首字母大写；
+		7、style.cssText代表style所有的内容；
+		8、innerHTML代表的是标签对中所有的内容；
+		9、可以给元素设置它本身不具体备的属性，叫自定义属性（索引）；
+		   自定义属性：
+				1、对象本身不具备的属性（不是标准中规定的属性，是我们自己设置的）；
+				2、索引值：在事件中，需要知道当前元素在一组元素中是第几个的时候，需要使用索引值；
+
+
+字符串：
+	引号包起来的一窜字符；
+	
+布尔值：
+	true 和 false；
+	
+运算符：
+	+：
+		1、如果加号俩边都是数字，执行加法运算；
+		2、如果有一边是字符串，执行字符串链接；
+		
+	*,/,-,%,--,-=,*=,/=,%= 执行数字运算；
+	> , == , < , >= , <= , != 		逻辑运算符,返回的结果是布尔值;	
+
+	! 非(否)		布尔值中取反;
+		
+<!---->
+
+if:		
+	if(布尔值){
+		// 为true执行if,if下边的语句就不执行,为false 就接着往下执行;
+	}else if{
+		
+	}else if{
+		
+	}else {
+		
+	}		
+		
+for循环:
+	
+	当需要同时操作一组元素,或一组数据时需要用到循环;
+	
+	1、 初始值;
+	2、 判断条件;
+	3、 执行语句;
+	4、 自增;
+		
+	执行顺序： 1、2、3、4、2、3、4
+	for(i= 0; i<5; i++){
+		
+	}
+	<!---->	
+	
+数组	：	
+	用来存储一组数据
+	格式 [data1,data2,data3] 每一个数据之间用，隔开
+	一组数据不能直接操作，要操作一位 需要使用下标
+	可以从数组length获取到数组中存储多少位数据	
+		
+this：
+	事件函数中 this指向，触发当前事件的元素
+	目前的非事件函数，this指向window
+
+
+
+
+<!--==========================================2017.05.09====================================-->
+【for循环】
+<!--1、当我们需要同时处理一组数据的时候，就需要使用循环；-->
+	。起始值
+	。判断条件
+	。执行语句
+	。自增
+	for(i=0; i<10; i++){
+		<!--//执行语句-->
+	}	
+	i = 10
+	<!--当变量执行条件永远存在，就会一直执行，陷入死循环，页面死机-->	
+	<!--循环变量在for循环结束之后，一样调用，不过调用的值是for不符合条件之后的值-->	
+	
+。第一次循环：页面加载完毕就循环完，给每个对应li标记事件；	
+。第二次循环：鼠标操作时触发了事件才执行，才能控制所需
+		
+<!--======2017.05.10======-->
+1、	get			加载时获取一次，点击操作时又获取一次；
+	query 		只加载时获取一次；
+	null 		空对象，不能进行属性操作；
+	for套for：	同一时间执行的才是for套for；
+	
+2、	自定义属性：	定义一个元素本来不存在的属性，需要先设置才能获取；	
+	<!--当我们在事件中需要知道当前事件的这个元素是一组中的第几个的时候，添加索引值即自定义属性-->
+	
+	
+	
+<!--====================================2017.05.12 类型转换====================================-->
+
+typeof 		查看类型；
+			在typeof中数据类型分为：
+			number、string、undefined、boolean、object、function；
+
+类型转换
+			强制类型转换【显示类型转换】： parseInt、parseFloat、Number；返回值都是一个数字；
+										parseInt、parseFloat 转换数组都是NaN；
+										
+			强制转换成字符串：
+				1、要转换的内容.toString();
+				2、String（要转换的内容）；
+				
+			强制转换成布尔值：
+				Boolean（要转换的内容）；
+
+			真：
+					true，非空字符串，非0数字，非空对象；
+			假：
+					false，空字符串，0，NaN，null，undefined；
+
+			
+			隐私类型转换：
+				浏览器自己进行转换，其他类型转换成数字，主要调用Number；
+			【+】
+				1、加号俩边
+			
+number 		数字，从负无穷到正无穷的数字，以及NaN（not a number）；
+
+对象：		数组、null、元素对象、object；
+
+arr[] 		对象 object； 数组为空，也是对象，可以进行属性操作；
+			object = null ，对象为空，也是对象；
+
+underfind 	没找到、未定义；	
+function 	方法
+	
+parseInt 	【取整】从左往右一位一位的查看，如果遇到一位是非数字的，结束执行，把这位之前的数字返回；
+			【要转换的数字，传进来的数字的进制】；
+			<!--0x 是十六进制数字--> ？
+			
+parseFloat 	【取点】转换为浮点数（小数），从左往右一位一位的查看，如果遇到一位是非数字的，就返回【第一位小数点后面的数字就截止】；
+
+Number 		从左往右一位一位的查看，如果完全符合数字的规则就转换，否则就返回NaN；
+			true = 1 ； false = 0 ； null = 0 ； document  = NaN ;  underfind = NaN;
+			
+			空数组
+				[] = 0 ; 
+				[1] 只有一位时，就用这一位去转换，并且只转换数字和字符串，其他都是NaN；
+				数组有多位，只会被转换成NaN；
+				
+				Number.POSITIVE_INFINITY 正无穷
+				Number.NEGATIVE_INFINITY 负无穷
+
+string 		包含在引号里的一窜字符；
+			
+
+object 		array，object，ELement，null，function；
+null 		空对象，不能进行属性操作的数据类型
+NaN 			非数字
+			1、不等于任何东西，包括他自己；
+			2、检测一个内容是否是NaN的时候，可以使用isNaN（）；
+			3、数据类型：number；
+			4、isNaN return；true/false； isNaN隐试调用了number；
+
+
+|| 		或；
+		当第一个条件返回true，就结束运行，直接返回true，如果第一个是false，就看第二个，如果第二个是true，整体也是true，如果都是false，就返回false；
+<!--
+&&		并且，
+	
+
+//alert(1>2||2>1);
+
+	|| 当一个条件返回true，就结束运行，直接返回true，如果第一条件返回false，那再来看第二个条件，如果第二个条件返回true，整体也为true，如果两个两条件都返回false则返回false;
+
+
+alert(1>2&&2>1);	
+
+	&& 并且 当一个条件返回false，就结束运行直接返回false，如果第一条件返回true，那再来看第二个条件，如果第二个条件返回false，整体也为false，如果两个两条件都返回true则返回true;
+-->	
+
+checkbox
+		选中是true，没选中是false；
+
+<!--//能转换结果的原始元素
+	//Number: 		数字，纯数字的字符串，true,false,null,[]，其他的只能转成NaN；
+	//parseInt：		Number + 首位有数字的字符串【不带小数】；
+	//parseFloat：	parseInt + 【带一位小数】；
+	//isNaN：		的确不是数字:true,false;
+	// ！ ：			取反；
+	//typeof【属性】；
+	//		Number		阿拉伯数字；
+	//		string		有‘’的；
+	//		boolean		true,false ，
+	//		undefined	未定义
+	//		object		[]，null,
+	//		function		function，-->
+	
+	
+.charAt(1)	
+			字符串中的第几位是什么；
+			
+.indexOf('c')	
+			查找c是字符串的第几位
+	
+<!--=======================老师课件=========================-->
+
+标准制定的数据类型划分:
+	基本类型:
+		number(数字)、string(字符串)、undefined、boolean(布尔值)、null(空对象)
+	对象类型（复合类型）：
+		object (对象)包含array；
+		
+在typeof中数据类型分为【运算符，查看数据类型】:
+		number、string、undefined、boolean、object、function
+
+Symbol 	 ES6引入了一种新的原始数据类型Symbol，表示独一无二的值。
+
+
+<!--====================================2017.05.15 ====================================-->
+关系运算符
+	<,>，<=,
+		
+	比较后都会返回布尔值;
+	
+	== 和 !==
+		会进行隐式类型转换,把左右俩侧的数字类型转换成一样的之后,再去比较;
+	
+	== 和 ===
+		会直接比较数据类型;不一样就返回;
+		
+&& 与【并且】  || 或   ! 取反;		返回结果都是true和false;
+
+三目运算符;
+	var c = a > b?a:b;
+			判断条件?成立执行的语句:不成立执行的语句;	
+		
+continue 	跳出本次循环；
+break 		终止整个循环；默认只终止紧邻它的循环；
+			如果要终止整个循环；在break后加上 要终止的名字【break name】；
+
+{} 			对象存储数据：存在对象的属性里；
+			obj.key = value;
+			
+			对象 是一种复杂类型的数据， 在对象中我们可以存储任意类型的数据；
+			
+属性操作
+1、			读操作：obj.属性名；
+			写操作：obj.属性名 = 属性值；
+				   obj.key = val;//键值对；
+2、			读操作：obj['属性名']；
+			写操作：obj['属性名'] = 属性值；
+				   obj['key'] = val;//键值对；
+				   
+				   []里写的是字符串；可以获取字符串；而.name里的点获取的是死值；
+in 
+			在什么里面；返回布尔值；
+			alert('name' in obj)
+
+
+for( var s in arr) 
+				//找到arr上的所有属性，s会依次变成arr的属性名；
+				for in 可以用来循环 对象和数字；不能用来循环一组元素；
+				for 只能用来循环数组，和类数组（一组元素）；
+
+				var obj = {
+					name: "leo",
+					age: "40"
+				};
+				for(var s in obj ) {
+					console.log(s,obj[s]); //在循环中 s每次代表obj中一个属性的名字
+				}
+
+
+while循环		启始值
+				while（判断条件）{
+					执行语句；
+					自增；
+				} 			
+
+
+switch
+多项判断；
+switch(a要判断的内容){
+	case 10: //当a == 10；
+	console.log('123');
+	break; //当a == 10的语句结束之后；结束语；
+	case 15: //当a == 15；
+	console.log('123');
+	break; //当a == 10的语句结束之后；
+	default:  //以上所有的判断都不成立；
+	console.log('123');
+	
+}
+穿刺
+			1.case 成立会把下边代码都执行，直到遇到break；
+
+
+
+<!--====================================2017.05.16 ====================================-->
+
+
+
+
+<!--====================================2017.05.17 ====================================-->
+
+定义函数
+			function fn() {alert(1);}	
+			var fn2 = function(){alert(2);}
+			fn2();
+函数调用
+			fn(); //直接调用 		document.onclick = fn2; //事件调用
+
+函数表达式 -- 匿名函数自执行 
+			(函数)(); 	!函数(); 	~函数(); 	+函数(); 	-函数();
+
+function fn(a形参){alert(a参数使用);}
+fn(实参); 	函数拥有多个参数，注意在使用的时候，形参和实参要一一对应;
+			
+			参数其实就相当于 函数的局部变量;
+			只定义形参不传实参的话， 参数就是undefined;
+			
+有一个函数,传进来的参数个数是不固定的,但是我想把所有参数的和计算出来;
+
+arguments 	不定参 函数所有参数的集合
+			获取其中一个参数：下标
+			获取参数的总个数：length
+			function fn() { var nub = 0 ; for(var i = 0; i < arguments.length; i++){ nub += arguments[i]; } }fn(1,1,1);
+return	
+			每个函数中都可以存储数据，存储的数据，可以在函数执行完成之后拿到 ;
+			return 函数返回值 (函数执行完成之后，返回的数据);
+			只能在函数中使用;
+			return后面跟的值为函数执行后的返回值;
+			函数中 return后边的内容 不会被执行(在函数执行时，会把return后边的数据返回，然后函数执行到此结束)
+
+函数返回值	function getNub(price,length){return price*length;}
+			console.log(getNub(a,b));
+			
+封装			function $(){//通过id获取元素 return document.getElementById("btn"); }
+			window.onload = function(){ var btn = $(); console.log(btn); };
+<!--
+			function $(idName){//通过id获取元素
+				return document.getElementById(idName);
+			}
+			function $tag(parent,tagName){//通过标签名获取元素
+				return parent.getElementsByTagName(tagName);
+			}
+-->
+函数：		function 功能方法 把一个个零散的代码和数据，组合成一个完整的方法.
+
+获取计算后样式
+			getComputedStyle(el)['style'];标准下获取计算后样式 (函数)；
+			el.currentStyle['style'];IE下获取计算后样式 (元素上属性)；
+			alert(getComputedStyle(box)["width"]); //  获取box的宽度；
+			console.log(getComputedStyle(box));
+	 		console.log(box.currentStyle);
+	 		
+			<script type="text/javascript">
+				window.onload = function(){
+					var box = document.getElementById('box');
+					if(box.currentStyle){
+						// IE
+						alert(box.currentStyle["width"]);
+					} else {
+						// 标准浏览器
+						alert(getComputedStyle(box)["width"]);
+					}
+				};
+			</script>
+			
+currentStyle  不可以获取复合样式；			
+获取bacngroundImage获取到的是绝对路径；
+
+			<script type="text/javascript">
+				function getStyle(el,attr){ //el：Element；attr 属性
+					if(el.currentStyle){// IE
+						return el.currentStyle[attr];
+					}// 标准浏览器
+					return getComputedStyle(el)[attr];
+				}
+				/* 计算后样式只能获取 不能设置 */
+				window.onload = function(){
+					var box = document.getElementById('box');
+					// 点击box向右移动 50px
+					box.onclick = function(){
+						var left = parseFloat(getStyle(box,"left"));
+						box.style.left = left + 50 + "px";
+					};
+				};
+			</script>
+	
+
+
+<!--==========================================2017.05.18====================================-->
+
+作用域（scope）
+		一条数据可以在哪个范围内使用；
+		一般来说，一段程序代码并不是始终有效可用的，而限定这个数据可用性的代码范围就是这个名字的作用域。
+		作用域的好处：
+			1、提高了程序逻辑的局部性；
+			2、增强程序的可靠性；
+			3、减少名字冲突；
+
+js中，变量作用域【区分标准：变量声明的位置】：
+		1、全局作用域（全局变量）；
+			1）所有加在window上边的作用域，可不写window，直接写属性名就行；
+			2）变量如果不加声明，就默认是window的内容，作用域变为全局；
+			3）函数外定义的变量；
+			4）不适用var定义的变量；
+			5）没申明在任何函数内部的函数；
+					
+			。全局变量，任何地方都可以调用、修改，尽量不要用，会造成全局污染：命名冲突；
+		
+		2、局部作用域（局部变量）；在函数内部，就是局部变量；
+			1）使用var在函数内部定义的变量；
+			2）使用function在函数内部声明的函数；
+
+		ps： js的ECMAScript5.1中，只有函数可以产生作用域；【ECMAScript6中，let也可以，但只在内部可用】
+			 for(let i = 0; i < 5; i++){}	alert(i);   //  找不到i，报错；
+			<!---->
+
+变量和函数的查找规则：
+		调用一条数据时，js首先会在当前作用域中进行查找，找不到，就往父级作用域找，一直到Window的作用域，还找不到，就报错；
+		
+预解析：
+		浏览器读取到script、function标签，先不执行，读完全程，从中把 var 和 function 提取到 script、function标签的最前边，然后再重新读取执行；
+		var： 提取 var 和后面的名字，不提取赋值；
+		function： 把整个function函数提取到前面，但排在var后面；
+
+闭包：
+		()()	形式函数中套了一个函数，内层函数可以访问外层函数中的局部数据；
+		里边可以访问外边，外边不可以访问里边，如果需要访问，用return返回数据；
+		闭包中，应用比较复杂的情况下，闭包内容函数的作用域中的数据，会一直得到释放；【不需要用的会释放】
+
+return：
+		函数执行返回的一个数据，就是函数返回值；
+		返回值定义在函数内部的return后边，如果没有定义return，返回的值就是underfind；
+
+
+
+<!--====================================2017.05.22 ====================================-->
+
+
+setInterval 		(fn,间隔时间) 重复执行	返回值：定时器编号；
+setTimeout 		(fn,延迟时间)执行一次 	
+
+
+
+
+
+<!--====================================2017.05.25 ====================================-->
+Math.PI 		圆周率
+Math.abs 	绝对值
+Math.floor 	向下取整
+Math.ceil	向上取整
+Math.round 	四舍五入【只到小数点后一位】
+
+toFixed(n) 	保留n位小数，返回值string，会四舍五入；
+Math.random()  		返回 0 - 1 之间的一个随机小数,不包含1，包含0；
+Math.random()*10 	随机 0 - n 不包含 n；
+Math.round(Math.random() * 10)   	随机 0 - n 包含 n；
+Math.round(Math.random() * 90)+10	随机 10 - 100 包含 10 和 100；
+
+Math.max(nub1,nub2) 返回最大值；只接受2个；
+Math.min(nub1,nub2) 返回最小值；只接受2个；
+
+
+/* 以下返回值 都是数字 */
+		var date = new Date(); 		Date() 日期对象,获取当前系统的时间
+		var year = date.getFullYear();//获取年份
+		var month = date.getMonth();//获取月份 0 - 11
+		var date2 = date.getDate();// 获取日期 1 - 31 
+		var day = date.getDay();// 获取星期几 0 - 6 （星期日为0）
+		var hours = date.getHours();//获取小时 0 - 23
+		var minutes = date.getMinutes();//获取分钟 0 - 59
+		var seconds = date.getSeconds();//获取秒钟 0 - 59
+		var mSeconds = date.getMilliseconds();//获取毫秒 0 - 999
+		console.log(year,month,date2,day,hours,minutes,seconds,mSeconds);
+		var time = date.getTime();//时间戳 1970年1月1日至现在的毫秒数
+		var time2 = Date.now();//时间戳 1970年1月1日至现在的毫秒数
+
+		setFullYear() 	    设置年
+		setMonth()    	    设置月  (月份从0开始计算)
+		setDate()     	    设置日 
+		setHours()   	    设置小时
+		setMinutes()  	    设置分钟
+		setSeconds()  	    设置秒钟
+		setMilliseconds() 	设置毫秒
+		setTime()      	设置距离1970-01-01 00:00:00（UTC）到目前日期对象的毫秒数
+
+
+角度转弧度: Math.PI/180*deg
+		Math.sin(弧度) 正弦 直角三角形中，对边和斜边比值		var a = Math.sin(30/180*Math.PI);
+		Math.cos(弧度) 余弦 直角三角形中，邻边和斜边比值 		var a = Math.cos(60/180*Math.PI);
+		Math.tan(弧度) 正切 直角三角形中，对边和邻边比值		var a = Math.tan(45/180*Math.PI);
+
+
+<!--====================================2017.05.31 ====================================-->
+
+字符串：
+		由0个多个字符组成，被成对的英文单引号或双引号包含起来；
+字符编号：
+		每一个字符在计算机的存储编号；
+字符集：
+		计算机会保存有一套或几套用于标注 编号和字符 对应关系的字典；
+ASCII
+计算机存储单位：
+		位：		bit --> 只能存0/1；
+		字节：	byte --> 8 bit；
+		kb：		1kb = 1024byte；
+		字节 => 2的8次方 => 256；
+
+中文字符在utf-8中占3个，有个别部分占4个；
+
+length 						只读属性；只能访问不能操作；
+str.charAt(index) 			返回str中index位置上对应的字符，如果不存在或index越界，返回空字符
+str.charCodeAt(index) 		返回str中index位置上对应的字符的<unicode>编码，如果不存在或index越界，返回NaN；
+str.indexOf(char) 			返回首次出现的位置，从左至右；如果不存在，返回-1；
+str.lastIndexOf(char) 		返回最后一次出现的位置；如果不存在，返回-1；
+
+
+str.substring(start,end) 	截取并返回字符串；start开始到end结束，不包含end；
+							start 默认是0，如果是负数，转成0；
+							end  默认是字符串的长度，如果是负数，转成0；
+							如果start比end大，则交换位置
+							
+str.slice(start,end) 		和substring属性一样；	区别在负数时；
+							如果是负数，就从右向左数start位确定起始位；	
+							
+str.substr(start,count) 		截取并返回字符串；start,截取的起始位置，默认为0,支持负数，count 截取的个数,默认为length，不支持负数；
+
+str.toUpperCase() 			全部转换成大写；
+str.toLowerCase() 			全部转换成小写；
+str.trim() 					删除首尾空格；
+
+str.split(s) 				根据s分隔str，并把分隔的结果保存数组返回；
+							s：分隔符，如果不存在，整个字符串将作为分隔后的唯一结果；
+							如果分隔符是空字符，就每个字符都加逗号分隔；
+
+* substring
+*   根据起始位置和结束位置进行截取
+*   不支持负数
+*   比较start与end大小关系，并做对应的位置互换
+* slice
+*   根据起始位置和结束位置进行截取
+*   支持负数
+*   不比较start与end大小关系，并做对应的位置互换
+*
+*
+* substr
+*   根据起始位置和个数进行截取
+*   起始位置支持负数
+* 
+
+<!--====================================2017.06.01 ====================================-->
+
+ Array
+    *   数组：一组 有序的 数据的集合
+    *   在js中，数组本质其实就是一个具有一些特殊特征和操作的对象
+    *创建数组的两种方式
+    *   1. new Array([data1, data2...]) 		该函数可以接收0个到n个值，这些参数将被作为数组的内容
+    *   2. []
+    * 
+ 	*使用	取值
+    *   我们可以通过下标/索引的方式，来获取数组中指定位置的数据
+    *   其实本质上就是获取数组这个对象下的某个名称为数字的属性的值
+    *	获取一个不存在的属性，返回的是undefined
+
+	注意：如果通过 new Array的方式来初始化创建一个数组，但是参数只有一个且为数字的时候，那么这个时候，这个唯一数字参数，不再作为数组的值，而是作为数组的长度。【 var arr2 = new Array(10);  // length:10;】
+    * 如果通过 [] 方式，则不会有上述的问题，不管有多少个值，值的类型是什么，都是作为数组的值；var arr3 = [10];// 0:10;length:1;
+
+arr.length
+    *   数组的元素个数<注意：真实的元素的个数和length的值不一定相等>，一个数组的length = 数组最大索引值 + 1
+    *   注意：可读可写，这就意味着，我们可以对一个数组的length进行修改，如果length的值被修改成小于现有数组索引的值，那么大于修改后的length的索引的值将会被自动删除，所以，除非我们知道修改length所带来的问题，否则不要轻易的去修改length属性
+
+arr.pop() 			删除数组最后一个 	|	返回：any，被删除的元素
+arr.shift() 			删除数组第一个 	|	返回：any，被删除的元素
+arr.push() 			向数组的尾部添加新的数据  	|	  返回：Number，返回新数组的长度 
+arr.unshift() 		向数组的头部添加新的数据  	|	  返回：Number，返回新数组的长度 
+
+arr.splice([start, count, data1...])  // 会修改原数组
+ 		删除数组指定位置的内容，并在删除的位置添加新的数据;
+		start: 删除的起始位置，默认0;
+		count: 要删除的元素的个数，默认0;
+		data1...: 要添加的新的元素;
+		返回：Array，被删除的元素;
+
+arr.slice(start, end)  // 不修改原数组
+    *   截取从start位置开始，到end位置结束，不包含end位置的元素
+    *   start: 截取的起始位置，默认0
+    *   end: 截取的结束位置，默认数组的length
+    *   返回：Array，被截取的元素
+
+
+arr.join(str)  // 把数组变成字符串；
+    *   把arr使用str拼接成字符串 		*   str: 拼接符 		*   返回：String
+
+arr.reverse()  // 倒着排列；
+    *   翻转数组 	*   该方法会翻转原有数组【倒着排列】 		*   返回：Array
+
+* arr.concat(arr1,arr2) // 合二为一；
+    *   把参数数组和源数组进行拼接，形成一个新的数组 	*   返回：Array
+
+
+arr.forEach(callback)
+    *   循环遍历数组元素
+    *   当我们调用数组的forEach方法的时候，这个方法在内部会循环该数组，每次循环都会调用传入callback
+    *   每次执行callback的时候，会把当前循环过程中的下标以及对应的值作为参数再传递给callback
+    *
+    *   callback: 函数，在forEach循环遍历的时候被调用
+	*   value: 循环过程中对应的值
+	*   index: 循环过程中对应的下标
+	*   obj: 数组本身
+<!-- 
+	var arr1 = 'abcdefg'.split('');
+	arr1.forEach(function(value, index) {
+        console.log(index, value);
+    });
+   
+	特点：闭包
+      buttonElements.forEach(function (button, index) {
+
+          button.onclick = function() {
+              for ( var i=0; i<buttonElements.length; i++ ) {
+                  buttonElements[i].style.background = '';
+                  divElements[i].style.display = 'none';
+              }
+              this.style.background = 'yellow';
+              divElements[ index ].style.display = 'block';
+          }
+
+      });
+-->
+
+arr.map(callback) // 创建新数组
+    *   循环遍历数组元素,目的：创建新数组
+    *   根据一个已有数组创建新的数组
+    *   返回：Array 新的数组
+<!--
+	var arr1 = 'abcdefg'.split('');
+    var arr2 = arr1.map(function(value, index) {
+        return value.charCodeAt(0);
+    });
+-->
+
+arr.filter(callback)  // 筛选数组；
+    *   循环遍历数组元素,目的：创建新数组
+    *   根据一个已有数组创建新的数组，如果回调函数返回true，保留当前循环的原始值到新数组，如果返回false，丢弃当前循环的原始值
+    *   返回：Array 新的数组
+<!--
+	var arr1 = 'a3bc1de4fg'.split('');
+    var arr2 = arr1.filter(function(value, index) {
+        return !isNaN(value);
+    });
+-->
+
+arr.sort(callback) // 数组大小排序；
+    *   排序，我们可以传入一个回调函数来设置排序的规则
+    *   callback: 回调函数，设置排序规则
+    *   排序：交换
+    *   小于等于0：不交换位置
+    *   大于0：交换位置
+<!--
+	arr1.sort(function(a, b) {
+        return a > b;  // 如果 a > b 就把a放在b后面，及从小到大；[要按顺序排列，就必须换位子，怎么排序，就用a>b换位还是<换位] 
+    });
+-->
+
+
+json 前后端数据交互中，最常用的数据格式
+	JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式
+	一种类似JS中的对象格式的字符串
+	数据以{}或者[]作为起始和结束
+	'{}'
+	'[]'
+	每个数据使用  键值对形式  key : value
+	key必须使用""包含
+	多个值之间使用逗号分隔
+
+	object JSON.parse(JSONString) 	/ 	console.log(JSON.parse(josn));
+		把JSONString转换成JS中对象类型
+	
+	string JSON.stringify(object)   /  console.log(JSON.stringify(obj));
+		把object转成JSON格式的字符串  
+
+
+<!--====================================2017.06.20 ====================================-->
+
+	onmouseover 	鼠标移入
+	onmouseout 	鼠标移出
+	onclick 		鼠标点击
+	onscroll 	滚动条滚动
+	onmousedown 鼠标按下
+	onmouseup 	鼠标松开
+	onmousemove 鼠标移动
+	onkeydown  	某个键盘按键被按下 		按着不放，会一直触发；
+	onkeypress 	某个键盘按键被按下并松开; 		按着不放，会一直触发；
+				keyCode 按下的是哪个键;
+	onkeyup 		键盘松开
+	onfocus 		焦点选中
+	onblur 		焦点离开
+	oninput 		input内容变化时；
+	onchange 	表单控件变动时【checkbox、select】
+	select 		文本焦点选中时，选中所有文字；
+				text[i].onfocus = function(){ this.select();//选中input或textarea中的内容。 };
+	event 		
+				
+	getBoundingClientRect 
+			返回值对象【获取元素相对于可视区域的上下左右和宽高】
+
+事件句柄　(Event Handlers)
+	onabort		图像的加载被中断。
+	onblur		元素失去焦点。
+	onchange	 	域的内容被改变。
+	onclick	 	当用户点击某个对象时调用的事件句柄。
+	ondblclick	当用户双击某个对象时调用的事件句柄。
+	onerror	 	在加载文档或图像时发生错误。
+	onfocus	 	元素获得焦点。
+	onkeydown	某个键盘按键被按下。
+	onkeypress	某个键盘按键被按下并松开。
+	onkeyup	 	某个键盘按键被松开。
+	onload		一张页面或一幅图像完成加载。
+	onmousedown	鼠标按钮被按下。
+	onmousemove	鼠标被移动。
+	onmouseout	鼠标从某元素移开。
+	onmouseover	鼠标移到某元素之上。
+	onmouseup	鼠标按键被松开。
+	onreset		重置按钮被点击。
+	onresize	 	窗口或框架被重新调整大小。
+	onselect	 	文本被选中。
+	onsubmit	 	确认按钮被点击。
+	onunload	 	用户退出页面。
+
+鼠标 / 键盘属性
+	altKey		返回当事件被触发时，"ALT" 是否被按下。
+	button		返回当事件被触发时，哪个鼠标按钮被点击。
+	clientX		返回当事件被触发时，鼠标指针的水平坐标。
+	clientY		返回当事件被触发时，鼠标指针的垂直坐标。
+	ctrlKey		返回当事件被触发时，"CTRL" 键是否被按下。
+	metaKey		返回当事件被触发时，"meta" 键是否被按下。
+	relatedTarget	返回与事件的目标节点相关的节点。
+	screenX		返回当某个事件被触发时，鼠标指针的水平坐标。
+	screenY		返回当某个事件被触发时，鼠标指针的垂直坐标。
+	shiftKey		返回当事件被触发时，"SHIFT" 键是否被按下。
+
+
+IE 属性 【除了上面的鼠标/事件属性，IE 浏览器还支持下面的属性：】
+	cancelBubble	 	如果事件句柄想阻止事件传播到包容对象，必须把该属性设为 true。
+	fromElement		对于 mouseover 和 mouseout 事件，fromElement 引用移出鼠标的元素。
+	keyCode			对于 keypress 事件，该属性声明了被敲击的键生成的 Unicode 字符码。对于 keydown 和 keyup 事件，	
+					它指定了被敲击的键的虚拟键盘码。虚拟键盘码可能和使用的键盘的布局相关。
+	offsetX,offsetY	发生事件的地点在事件源元素的坐标系统中的 x 坐标和 y 坐标。
+	returnValue		如果设置了该属性，它的值比事件句柄的返回值优先级高。把这个属性设置为 fasle，可以取消发生事件的源元素的默认动作。
+	srcElement		对于生成事件的 Window 对象、Document 对象或 Element 对象的引用。
+	toElement		对于 mouseover 和 mouseout 事件，该属性引用移入鼠标的元素。
+	x,y				事件发生的位置的 x 坐标和 y 坐标，它们相对于用CSS动态定位的最内层包容元素。
+	
+	
+标准 Event 属性
+	bubbles			返回布尔值，指示事件是否是起泡事件类型。
+	cancelable		返回布尔值，指示事件是否可拥可取消的默认动作。
+	currentTarget	返回其事件监听器触发该事件的元素。
+	eventPhase		返回事件传播的当前阶段。
+	target			返回触发此事件的元素（事件的目标节点）。
+	timeStamp		返回事件生成的日期和时间。
+	type	 			返回当前 Event 对象表示的事件的名称。
+
+标准 Event 方法【IE 的事件模型不支持这些方法】
+	initEvent()			初始化新创建的 Event 对象的属性。
+	preventDefault()		通知浏览器不要执行与事件关联的默认动作。
+	stopPropagation()	不再派发事件。
+
+<!--====================================2017.06.21 ====================================-->
+
+
+事件冒泡：
+		浏览器的冒泡机制: 当我们触发了元素的某个事件之后，它会首先执行，绑定在这个事件函数，然后，会向上一级传递这个事件，一直到顶层对象(window)；
+		先进行捕获（从window一直到事件发生的元素），然后在开始冒泡(从事件发生的元素一直在传递会 window)；
+		IE只冒泡不捕获【操作不了捕获】
+		e.stopPropagetion() //阻止冒泡；新版浏览器；事件监听；
+		e.cancelBubble = true; //取消冒泡
+
+事件绑定: 
+		把函数 绑定给对应的事件，当事件触发时，就会执行这些绑定在元素上的事件处理函数【onclick类的】；
+		事件一直都存在元素上，只是有些事件没有绑定对应的执行函数；
+
+事件监听：
+		传统的事件绑定【onclick类的】，会存在前后覆盖的问题，所以当我们需要让一个事件可以执行多个操作的时候，就需要使用事件监听；
+<!--
+el.addEventListener('event',fn[,useCapture]) 
+		el 元素
+		event 事件名称(click,mouseover...)
+		fn 事件执行函数
+		useCapture(true|false) true 捕获阶段，false冒泡阶段 (不写默认 false)
+	addEventListener 事件监听	
+/* 事件监听可以执行多个操作 */-->
+
+取消事件监听
+	el.removeEventListener('event',fnName[,useCapture]) 
+
+<!--事件流：	
+	事件流指事件在触发时的一个流程，就像for循环一样有一个执行的过程。
+	在事件触发时，会先执行一个阶段叫做“捕获阶段”，从最外层向触发该事件元素寻找的一个过程。最终找到触发该事件的元素，如果该元素有绑定事件处理函数则执行该函数。
+	在找到触发该事件的元素之后，会进行下一个阶段“冒泡阶段”，冒泡阶段是从触发事件的元素开始往外层寻找，直到最外层时结束整个事件流程。
+	不论是捕获阶段还是冒泡阶段，在寻找目标元素的过程和向外返回的过程中，所遇到每一个元素身上如果有相同事件的事件处理函数都会被调用。
+-->
+	事件委托：简单的说，把一组子元素的事件处理，利用冒泡的原理，在父级的事件中进行处理，在父级中我们可以通过event.target,获取到事件触发的元素，然后进行相关处理.
+<!--list.onclick = function(e){
+	console.log(e.target);//target代表事件发生的元素
+	h2.innerHTML = e.target.innerHTML;
+};-->
+
+阻止默认事件：
+		事件绑定中用 		return false	；
+		事件监听用		e.preventDefault();
+		取消冒泡 		
+阻止冒泡
+		e.stopPropagetion() //阻止冒泡；新版浏览器；事件监听；
+		e.cancelBubble = true; //取消冒泡
+菜单右键：
+<!--
+a.oncontextmenu = function(e){
+	console.log(e.button);
+	e.button 鼠标键值
+		0 -- 左键
+		1 -- 滚轮
+		2 -- 右键
+};
+-->
+keydown 				键盘按下
+e.keyCode			键盘编号
+event.ctrlKey  		事件触发时，ctrl键是否被按下，true按下，false未按下	
+event.shiftKey 		事件触发时，shift键是否被按下，true按下，false未按下
+event.altKey 		事件触发时，alt键是否被按下，true按下，false未按下
+	
+捕获从外到里，冒泡从里往外；
+
+//矩形碰撞返回 true 否则 返回 false
+<!--function getCollide(el,el2){
+	var rect = el.getBoundingClientRect();
+	var rect2 = el2.getBoundingClientRect();
+	if(rect.right < rect2.left
+	||rect.left > rect2.right
+	||rect.bottom<rect2.top
+	||rect.top>rect2.bottom){
+		return false;
+	}
+	return true;
+}-->
+
+//圆形碰撞返回 true 否则 返回 false
+<!--function getCollide(el,el2){
+	var rect = el.getBoundingClientRect();
+	var rect2 = el2.getBoundingClientRect();
+	var R1 = rect.width/2;
+	var R2 = rect2.width/2;
+	var centerX = rect.left + R1;
+	var centerY = rect.top + R1;
+	var center2X = rect2.left + R2;
+	var center2Y = rect2.top + R2;
+	var x = Math.abs(center2X - centerX);
+	var y = Math.abs(center2Y - centerY);
+	if(Math.sqrt(x*x + y*y) <= R1+R2){
+		return true;
+	}
+	return false;
+}-->
+
+克隆
+.cloneNode(true)
+
+
+<!--==================================== 2017.06.26 ====================================-->
+
+
+mousewheel 	 	滚轮
+wheelDelta 		鼠标滚动方向【+、—】
+
+
+DOMMouseScroll 	滚轮事件
+
+<!--document.addEventListener('DOMMouseScroll', function(e) {
+	box.innerHTML = e.detail; //滚动方向
+	// 3 向下滚动
+	// -3 向上滚动	
+});	-->
+
+<!-- 滚轮封装
+mScroll(document, function(e){
+	console.log("向上滚动");
+},function(e){
+	console.log("向下滚动");
+});
+function mScroll(el, toUp,toDown){
+	el.addEventListener('DOMMouseScroll', function(e) {
+		mouseScroll(e.detail,e);	
+	});
+	el.addEventListener('mousewheel', function(e) {
+		mouseScroll(-e.wheelDelta,e);	
+	});
+	function mouseScroll(dir,e){
+		if(dir > 0){
+			toDown(e);
+		} else {
+			toUp(e);
+		}
+	}
+}	
+-->
+classList className的列表
+		add()
+		remove()
+		contains(boolean);
+		length
+		value
+		item(index)
+		toggle?
+
+div.classList.add("d");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+push 	在尾部加入
+unshift 在头部加入
+pop 		删除数组最后一个
+shift 	删除数组第一个
+
+
+学习一个函数要知道的地方【作用，参数，返回值】；
+
+
+
+<!--==================================== 2017.06.29  移动端 ====================================-->
+touch事件: 
+	touchstart 手指触碰元素
+	touchmove 手指触碰元素之后，在屏幕中移动
+	touchend 手指触碰元素之后,在屏幕中抬起
+
+mouse事件:
+	mousedown 在元素中按下
+	mousemove 在元素中移动
+	mouseup   在元素中抬起 
+
+在模拟器下，用事件绑定的方式添加touch事件，时好时坏,但是在真机上没有问题,最好用事件监听来添加事件
+
+在移动端也支持mouse事件,但是mouse事件的执行，会有300ms左右的延迟
+	
+事件点透:
+		手指按下之后，会先执行touch事件，然后记录点击的坐标，300ms之后，在该坐标上查找元素，如果元素有鼠标事件就执行.
+		解决办法：preventDefault();
+	
+/*
+	阻止默认事件可以解决：
+		1.在IOS10之后，viewport中的禁止用户缩放和最大缩放比例失效
+		2.鼠标事件，在移动端会有点透问题 
+		3.在ios下会有系统默认的回弹(橡皮筋效果)
+
+	阻止默认事件会引起的问题:
+		1.阻止文字的选中
+		2.阻止所有的系统菜单
+		3.阻止页面默认的系统滚动条
+		4.阻止页面上所有的链接跳转
+		5.阻止页面上的表单控件获得焦点 	
+	不推荐的解决方案:
+		给单个控件添加阻止冒泡		
+	<!--*/
+		document.addEventListener('touchstart', function(e) {	
+			e.preventDefault();
+		});	
+		/* input 可以在touchstart，手动让他获得焦点 */
+		text.addEventListener('touchstart', function(e) {
+			this.focus();
+		});
+		/* 链接可以在js中 自己添加跳转 */
+		link.addEventListener("touchend",function(e){
+			window.open(this.href);
+		});
+		/* 这个方案并不推荐使用 */
+		// img.addEventListener('touchstart', function(e) {
+		// 	e.stopPropagation();
+		// });
+		img.addEventListener('touchend', function(e) {
+		 	window.open(this.src);
+		});	
+	-->
+
+touchEvent:
+		changedTouches 	触发当前事件的手指列表
+			clientX/clientY 相对于可视区的手指坐标
+			pageX/pageY 		相对于整个文档的手指坐标
+		targetTouches 	当前元素上的手指列表
+		touches 			当前屏幕上的手指列表
+		
+e.preventDefault();		//	在webkit的模拟器下，目前已经不支持直接给document设置阻止默认事件,但是真机没有问题
+
+
+
+<!--==================================== 2017.07.04  ====================================-->
+自定义属性
+		document.body.setAttribute("miaov","妙味课堂"); 【只写不读】
+		document.body.dataset.miaov = "妙味餐厅"; 【可读可写】
+		
+		<body data-miaov="妙味餐厅" miaov="妙味课堂">
+
+readAsText：该方法有两个参数，其中第二个参数是文本的编码方式，默认值为 UTF-8。这个方法非常容易理解，将文件以文本方式读取，读取的结果即是这个文本文件中的内容。
+
+readAsBinaryString：该方法将文件读取为二进制字符串，通常我们将它传送到后端，后端可以通过这段字符串存储文件。
+
+readAsDataURL：这是例子程序中用到的方法，该方法将文件读取为一段以 data: 开头的字符串，这段字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。这里的小文件通常是指图像与 html 等格式的文件。
+
+
+
+手势
+		gesture：
+				gesturestart 	2根及以上手指按下时触发；
+				gesturechange 	
+								e.scale
+								当前2根手指之间的距离和start时的比值；
+								e.rotation
+								当前2根手指和start时的选中夹角；
+				gestureend 		gesturestart触发后抬起；
+
+
+
+
+<!--==================================== 2017.07.05  ====================================-->
+
+window.orientation 		手机横竖屏的状态【方向】
+	undefined 			设备不支持横竖屏切换
+	90 -90 				横屏
+	0  180 				竖屏
+
+	orientationchange 	事件检测横竖屏切换
+
+window.addEventListener("orientation" in window ?'orientationchange':"resize", function(e) {
+	alert(window.orientation); // 检测是否支持横竖屏，不支持用窗口尺寸更改来检测；
+});
+
+
+devicemotion 		检测重力加速度、安卓下和IOS下，数值相反；
+
+window.addEventListener('devicemotion', function(e) {
+		var motion = e.accelerationIncludingGravity;
+		var x = motion.x;
+		var y = motion.y;
+		var z = motion.z;
+});
+
+//iOS，安卓的检测；
+function getIos(){
+	var u = navigator.userAgent;
+	//var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	return isiOS;
+}
+
+deviceorientation  		检测手机旋转角度变换
+
+window.addEventListener('deviceorientation', function(e) {
+		var x = e.beta;//围绕着x轴的旋转 (-180 - 180)
+		var y = e.gamma;//围绕着y轴的旋转 (-90 - 90)
+		var z = e.alpha;//围绕着z轴的选中 (0 - 360)
+	});	
+
+transform-origin 	z轴的设置，在ios下有兼容问题
+
+@keyframes（帧动画） rotate{
+	0%{
+		transform: translateX(0) rotate(0deg);
+	}
+	100%{
+		transform: translateX(200px) rotate(360deg);
+	}
+}
+animation: 3s rotate(el，旋转) linear(线型的) infinite(无穷) alternate(交替);
+
+
+<!--==================================== 2017.07.06  ====================================-->
+audio	音频 	
+
+video	视频 	
+ 		souce 			浏览器识别这个格式就使用这个格式，不识别就看一下，如果浏览器不识别audio或者video，会显示其中文字
+		autobuffer 		自动缓存
+		autoplay 		自动播放
+		loop 			循环播放
+
+controls 	显示控制面板
+			
+<video controls>
+	<source src="Intermission-Walk-in.ogv">
+	<source src="iceAge.mp4">
+	您的浏览器不识别视频播放
+</video>
+
+currentTime  :  		开始到播放现在所用的时间
+duration  :  		媒体总时间(只读)
+volume  :   			0.0-1.0的音量相对值
+muted  :   			是否静音
+paused  :   			媒体是否暂停(只读)
+ended   :   			媒体是否播放完毕(只读)
+error   :  			媒体发生错误的时候，返回错误代码 (只读)
+currentSrc  :   		以字符串的形式返回媒体地址(只读)
+webkitEnterFullscreen||webkitRequestFullscreen 全屏
+playbackRate 		播放速度
+play()  :  			媒体播放   
+pause()  :  			媒体暂停
+load()  :  			重新加载音频和视频
+poster  :   			视频播放前的预览图片
+width、height  :   	设置视频的尺寸
+videoWidth、 videoHeight  :   视频的实际尺寸(只读)
+durationchange  		媒体的时长已改变(获取到了视频时长)
+
+http://www.w3school.com.cn/tags/html_ref_eventattributes.asp
+
+
+
+<!--==================================== 2017.07.17 正则表达式 ====================================-->
+<!--/**
+     * 正则表达式，又称规则表达式。（英语：Regular Expression，在代码中常简写为regex、regexp或RE），计算机科学的一个概念。正则表通常被用来检索、替换那些符合某个模式(规则)的文本。
+     * 正则并不是js所独有的，他是独立与任何语言之外的，很多的编程语言都支持使用正则规则对字符串进行一些复杂的操作。
+     *
+     * js中常用的一些字符串操作：
+     *  1. 查找
+     *      indexOf
+     *      includes
+     *      charAt
+     *  2. 截取
+     *      substring
+     *      substr
+     *      slice
+     *  3. 替换
+     *      replace
+     *  4. 其他	
+     *      split
+     *
+     * 参考：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
+         */-->
+
+ * 正则在js中是以对象的形式存在的，和日期对象，数组对象类似
+     * 创建正则对象的方式：
+     *  1. 传统：new RegExp()
+     *  2. 简写：//
+
+	<!--str.match(/\d/g)--> 	
+\d: 			一个数字，
+\d+: 		多个数
+match：		保存为数组；
+g: 			全局查找;
+	<!--str.match(/\d+/g)--> 	
+
+
+	console.log('miaov'.search(/a/i));   查找a在第几位，不论大小写；
+i:ignore 	忽略 大小写；写在最后一个/后面；
+
+.replace(要查找的，要替换的)
+     *  第一个参数：既可以接收普通的字符串，也可以接收正则对象
+     *  第二个参数：既可以接收普通的字符串，还可以接收一个函数（回调）
+
+HTML实体符号:&nbsp;等等
+
+[] 		里面的数都是单个的识别； [123]:1/2/3;
+^ 		反向选择 /a[^12]b/g   非1和2的数字；
+\D 	 	一个非数字
+
+() 		子项
+     *    1. 范围(提权)
+     *    2. 会在结果中保留（提供）子项当前匹配的内容
+
+<!--
+	var d1 = '2017-7-17';
+    var d2 = '2017.7.17';
+    var d3 = '2017/7/17';
+    var d4 = '2017-7.17';
+    var d5 = '2017/7-17';
+    
+	function formatDate(str) {
+        return str.replace(/(\d+)\D+(\d+)\D+(\d+)/, function($0, $1, $2, $3) {
+
+            // 第一个参数：当前整个正则所匹配的内容
+
+//            console.log($0);
+//            console.log($1);
+//            console.log($2);
+//            console.log($3);
+
+            return $1 + '年' + $2 + '月' + $3 + '日';
+
+        });
+    }
+-->
+
+
+ * XSS ( CSS )  	  跨站脚本攻击
+<!--
+	>  <  等特殊符号的更改，不能直接引用，要经过处理；
+		
+		li.innerHTML = content.value.replace(/<|>/g, function($0) {
+            if ($0 == '<') {
+                return '&lt;'
+            } else {
+                return '&gt;'
+            }
+        });
+        ul.appendChild(li);		
+-->
+
+^  		反向选择的意思，只能在 [] 的开始;	console.log(str.replace(/a[^12]b/g, '*'));
+^  		字符串的起始
+$  		字符串的结尾
+
+量词
+     *  {n} : 只能n次
+     *  {n,} : 最少n次，最多不限
+     *  {n,m} : 最少n次，最多m次
+     
+     console.log( /^[1-9]\d{4,11}$/.test(qq) );
+
+<!--
+	* \d : 一个数字
+    * \D : 一个非数字
+    * \w : 一个字符（字母数字下划线）
+    * \W : 一个非字符（字母数字下划线）
+    * \s : 一个空格
+    * \S : 一个非空格
+    * \b : 一个边界符，如果一个字母数字下划线的左侧或右侧不在是一个字母数字下划线，那么这里就会有一个符号：边界符
+    * \B : 一个非边界符
+    * \{n} : 重复子项【案列看课件】
+    *
+    * . : 任意字符，除了换行符
+    *
+    * 量词
+    *  {n} : 只能n次
+    *  {n,} : 最少n次，最多不限
+    *  {n,m} : 最少n次，最多m次
+    *
+    *  + : 最少一次，最多不限 {1,}
+    *  * : 最少0次，最多不限 {0,}
+    *  ? : 最少0次，最多1次 {0,1}
+    * 
+    * */-->
+
+
+<!--==================================== 2017.07.18  面向对象  ====================================-->
+
+new 		只能和函数使用，称为构造函数，用大驼峰命名：
+		1、this == 该对象；
+		2、返回： 内部创建的空对象 或 return的{}；
+		3、结果： 创建对象；
+
+prototype 	共有的属性或方法
+		通常把对象私有属性或方法放置在每个对象自身上
+        通常把对象公有（共有）的属性或方法放置在这些对象的构造函数的原型下
+
+<!--* 在js中，对象的创建有两种方式
+    *   1. new Object()
+    *   2. {}
+    * -->
+
+<!--/*
+    * new
+    *   运算符；通过new运算符运算函数，会得到一个对象的结果；new只能和函数配合使用
+    *
+    * 当我们通过new的方式去调用执行一个函数的时候
+    *   1. 在函数内部自动创建一个空的对象
+    *   2. 把该函数的this指向该对象
+    *   3. 函数执行完成自动返回该对象
+    *
+    * 当我们通过new的方式去调用执行一个函数的时候，返回：
+    *   1. 如果没有return
+    *       返回内部创建的空对象
+    *   2. 如果有return
+    *       1. return的是非对象
+    *           返回内部创建的空对象
+    *       2. return的是对象
+    *           返回的就是return的对象
+    *
+    * 返回总结：无论是否有return，当我们通过new的方式去调用一个函数的的时候，该函数一定会返回对象
+    *
+    * 通过new可以得到对象，通过new执行函数就是用来创建对象的
+    *
+    * 我们把new执行的函数称为：构造函数
+    * 构造函数与普通函数的区别就是是否使用new来执行
+    * 为了和普通函数做个区分，通常情况下，我们会把即将作为构造函数的函数使用大驼峰式命名
+    * *
+
+* 构造函数 <-> 类
+     * 类：类型，对具有相同特征的对象的抽象描述
+     * 对象：由类创建出来的具体对象（实例），也称为实例化对象
+     * 构造函数：类中用来创建对象的具体函数，类创建对象的时候调用的初始化函数
+     * 
+ prototype    * 
+     * 为了使对象共有的特征方法维护和管理，所以有一种专门来管理和维护这些共同特征的方法（手段）
+     *
+     * 当一个函数被创建的时候，该函数下自动会有一些属性（函数也是对象），其中有一个属性，名称：prototype，他的值是一个对象，我们通常就把构造函数创建的对象所拥有的共同特征保存在这些对象的构造函数的prototype属性下
+     *
+     * 当一个对象被创建的时候，对象自动会创建一个属性，名称：__proto__，该属性也是一个对象，其实该属性就是该对象的构造函数的prototype
+     *
+     * 当我们去调用一个对象下的属性或方法的时候，对象首先会在自身上查找是否该属性或方法，如果有则调用，如果没有，则会查找自己的__proto__属性上是否有给属性或方法
+     *
+     *
+     * 总结：
+     *  我们通常把对象私有属性或方法放置在每个对象自身上
+     *  我们通常把对象公有（共有）的属性或方法放置在这些对象的构造函数的原型下
+     *
+     *  构造函数+原型
+     * 
+     * 
+/-->
+
+<!--
+	function Tab(container) {
+		//相同属性的操作；
+        this.buttons = container.querySelectorAll('button');
+        this.ps = container.querySelectorAll('p');
+        this.n = 0;
+        this.length = this.buttons.length;
+
+        var _this = this;
+
+        for (var i=0; i<this.length; i++) {
+            this.buttons[i].index = i;
+            this.buttons[i].onclick = function() {
+                _this.n = this.index;
+                _this.show();
+            }
+        }
+    }
+    // 对象下的动作；
+    Tab.prototype.show = function() {
+        for (var i=0; i<this.length; i++) {
+            this.buttons[i].style.background = '';
+            this.ps[i].style.display = 'none';
+        }
+        this.buttons[this.n].style.background = 'yellow';
+        this.ps[this.n].style.display = 'block';
+    }
+    //新建对象；
+    var t1 = new Tab(div1);
+	// 调用方法 一；
+    btns[0].onclick = function() {
+        t1.n = 2;
+        t1.show();
+    }
+    // 调用方法 二；
+    function Drag(element) {}
+    new Drag(div1);
+	new Drag(div2);
+	new Drag(div3);
+    -->
+
+<!--==================================== 2017.07.19  继承  ====================================-->
+【!!】	转为布尔值的简写；
+//每个函数有个__proto__ ,这个__proto__等于父级的prototype。
+
+内置对象： js已经定义好的对象，及定义了对应的构造属性；
+		  有Array,Date,RegExp,String,Number,Boolean六种；
+		  【new Array,new Date,new RegExp,new String,new Number, new Boolean】new 类的构造函数；
+包装对象： 调用【字符串、数字，布尔值】原本没有的属性和方法时，js内部自动调用其对应的构造函数，
+		  把值作为参数传入，然后执行返回结果。
+		  有String、Number、Boolean三个。
+		  <!--
+		  	var str = 'miaov';
+		  	var s = str.indexOf(0);
+		  	var s = new String(str).indexOf(0); 
+		  	String就是一个字符串数据的包装对象
+		  -->
+
+hasOwnProperty()
+    *   判断某个属性（方法）是否是某个对象自有的，就是非原型链上的【返回布尔值】
+    <!--
+    	function Person() {
+        this.name = 'motao';  【true】
+    }
+    Person.prototype.x = 100; 【false】
+    -->
+
+constructor 		//var a = [1,2,3]; console.log(a.constructor == Array); true;
+		属性：返回对象的构造函数；
+
+instanceof  		//var arr = [1,2,3]; console.log(arr instanceof Array); true;
+		运算符 ： 判断对象是否是某个构建函数的实例化对象；
+
+toString()
+    *   Object对象prototype里的一个方法，所有对象都继承该方法
+<!--等同于：
+	Array.prototype.toString = function() {
+        var result = 0;
+        for (var i=0; i<this.length; i++) {
+            result += this[i];
+        }
+        return result;
+    }
+-->
+
+赋值 	var a = 1; var b = a; b = 2; 这时候，b更改，a不受影响；因为俩个是独立的；
+赋址		var a = [] || {};  var b = a; 这时候，更改b的值，a也会变，因为是共用同一地址、同一内容块；
+		对象、数组是赋址，更改会受影响；
+
+继承 	Drag.call(this, element); // 用.call来关联和另一个的关系；
+
+ <!--/*
+    * 内置对象
+    *   js提供的已经定义好的对象
+    *   Array,Date,RegExp,String,Number,Boolean
+    *   同时js定义好了对应的一些构造函数
+    *
+    *   字符串，数字等基础类型数据是没有属性和方法的。
+    *   ？？那么我们平时创建了一个字符串（非字符串对象）的时候，为什么可以调用他length，indexOf等属性或方法？？
+    *   上面问题的答案就是：包装对象
+    *
+    * 包装对象
+    *   当我们去调用字符串，数字，布尔值这三种基础数据类型的属性和方法的时候，他们本身是不具备属性和方法的，但是js内部，会自动的去调用他们对象的构造函数，然后把他们的值作为参数进行传入，然后执行对应属性或方法，并把结果进行返回
+    * 包装对象一共有三个：
+    *   String,Number,Boolean
+    * */-->
+    // 如果我们尝试给字符串，数字，布尔值增加自定义的属性和方法的时候，是无效的
+    // 所以当一个字符串被申明以后，其值就不会发生改变，除非重新覆盖，所以我们把字符串值又称为字符串常量 - 字面量
+
+
+
+
+
+
+
+
+<!--==================================== 2017.07.20  原型链、继承、克隆  ====================================-->
+constructor 		 // 是父级prototype的一个属性，但是又是指向父级本身；
+	    				Foo.prototype.constructor = Foo;
+
+ * 类式继承
+
+<!--
+ function Person() {
+        this.name = 'motao'
+    }
+    Person.prototype.eat = function() {
+        console.log('eat');
+    }
+
+    function Teacher() {
+        Person.call(this);
+    }
+
+    // 引用了
+//    Teacher.prototype = Person.prototype;
+
+    /**
+     * 让Teacher的prototype指向Person的一个实例对象，这样的话Teacher的prototype和Person的prototype就没有直接的引用关系，但是因为Teacher的prototype是Person的一个实例，那么Teacher的prototype自动会查找Person的prototype
+     *
+     * 通过Teacher的prototype可以找到Person的prototype下，但是Teacher的prototype和Person的prototype又没有直接的关系
+     */
+    Teacher.prototype = new Person();
+
+    var mt = new Teacher();
+    console.log(mt);
+    mt.eat();
+
+//    mt.eat => mt.__proto__.eat => Teacher.prototype.eat => new Person().eat => new Person().__proto__.eat => Person.prototype.eat
+-->
+ * 原型继承		和类式继承有点像；
+
+ * 深度克隆		
+ 	问题：obj2和obj1是引用关系，obj2的修改会影响到obj1
+	解决：把obj1中的值单独赋值给obj2
+
+<!--
+	var obj1 = {
+        x: 10,
+        y: 20,
+        attr: {a: 1},
+        arr: [1,2,3],
+        z: null
+    };
+    
+    var obj2 = extend(obj1);
+    console.log(obj2);
+    obj2.attr.b = 2;
+    console.log(obj2.attr);
+    console.log(obj1.attr);
+
+    function extend(originObject) {
+        // 根据originObject的原始类型来对新对象进行对应的初始化，保证进来什么格式出去就是什么格式
+        var newObject = Array.isArray(originObject) ? [] : {};
+        for (var property in originObject) {
+            // 如果当前数据是对象的话，那么就需要进行深度克隆
+            // 注意：typeof来判断数据类型是有一个小的问题的，null的typeof结果也是object，所以需要排除null值的深度克隆
+            if (typeof originObject[property] == 'object' && originObject[property] !== null) {
+                // 核心：递归克隆
+                newObject[property] = extend(originObject[property]);
+            } else {
+                newObject[property] = originObject[property];
+            }
+
+        }
+        return newObject;
+    }
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--==================================== 2017.07.24  jquery  ====================================-->
+ https://jquery.com/
+* https://github.com/jquery/jquery
+*
+* API - Application Program Interface - 应用程序接口
+* 接口: 某个事物对外提供的用于操作他的方法
+
+jq库分装了一个核心的函数：
+    *   jQuery或者$
+
+返回一个类数组对象 - jquery对象
+//    function $(selector) {
+//        return document.querySelectorAll(selector);
+//    }
+
+jq分装了一些和DOM元素相关的操作方法：
+     *  DOM属性
+     *  css
+     *  偏移
+     *  数据操作
+     *  尺寸
+ * css()
+    *   获取或设置匹配元素的样式
+
+* jQuery.cssNumber
+        *   他是一个对象，包含了所有的不需要单位的css样式属性名称，当我们通过jq的一些方法去设置元素的样式值的时候，如果该属性存在在当前jQuery.cssNumber对象中，那么值就不会添加单位
+
+
+* jQuery.cssHooks
+        *   他的值是一个对象，提供了扩展css样式设置的方法，我们可以通过他来新增一些css属性的获取和设置操作
+        *   我们只需要给该对象添加一个新的属性名称，对应的值是一个对象，该对象下包含了两个方法：get，set
+ <!--
+//      console.log( $('div').css('width') );
+		//设置计算面积的方法；
+        $.cssHooks['area'] = {
+            get: function(elem, computed, extra) {
+                // elem : 触发当前get方法的元素
+                var values = getComputedStyle(elem);
+                return parseFloat(values.width) * parseFloat(values.height);
+            }
+        };
+
+        console.log( $('div').css('area') );
+        console.log( $('div').css('wh', 300) );
+-->      
+* 属性：
+    *   attribute : 标签上的属性
+    *   property : 对象上的属性
+<!--
+// 加给标签元素的属性
+//    $('#div1').attr('miaov', 'motao');
+
+
+    $('#div1').prop('miaov', 'motao');
+
+    // 加给元素对象的 - js
+//    document.getElementById('div1').miaov = 'motao';
+    console.log($('#div1'));
+-->
+
+ * jq事件中的事件对象不是原生的事件对象，而是经过jq内部处理的普通对象，只是这个中的一些特性和原生中事件有一定的关联
+        *
+        * 在jq的事件函数中使用return false 既可以阻止默认行为，还可以阻止冒泡
+        *
+        * jq事件对象中的一些属性和方法和原生中的属性方法基本类似，只是处理一下兼容，使其更加好用
+        
+
+
+<!--==================================== 2017.07.26  jquery  ====================================-->
+jq插件
+    *   1. 静态
+    *   2. 对象（实例）
+			$.inArray();    //对象方法
+			new $().css();  //实例方法
+
+$.inArray() 		jQuery.inArray( value, array [, fromIndex ] )
+				$.inArray()方法类似于JavaScript的原生.indexOf()方法，没有找到匹配元素时它返回-1。
+				如果数组第一个元素匹配value（参数） ，那么$.inArray()返回0。
+
+$.extend 		
+			把后面的合并进第一个[ banana: {weight: 52, price: 100},/banana: {price: 200},/]
+		2、$.extend(object1, object2); 		
+			后面相同名字的内容替换前面整个的；//banana: { price: 200}
+		3、	$.extend(true，object1, object2); 		
+			后面相同的覆盖前面的单个相同的；//banana: {weight: 52, price: 200}
+		4、	$.extend({}，object1, object2); 		
+			新建一个，内容为后面相同的覆盖前面的整个的；//banana: { price: 200}
+
+jQuery.fn.extend( object )  		
+		继承了jQuery原型($.fn)对象，以提供jQuery原型新的方法，可以链式调用jQuery()函数。
+
+// 正则检测 QQ 
+
+实列插件//
+$.extend({
+            validateQQ: function(str) {
+                return /^[1-9]\d{4,11}$/.test(str);
+            }
+        });
+        
+        console.log( $.validateQQ('200824584') );
+
+
+
+
+
+<!--==================================== 2017.07.27  es6  ====================================-->
+es6 新增变量申明的关键字【说的都是不同点，没说的都是一样的】
+
+<!--
+var 		可重复申明， 可修改，		不支持块级作用域
+let 		不可重复申明，没有预解析，要先申明后使用，支持块级作用域
+const 	不可重复申明，先申明、赋值再使用，支持块级作用域，如果是{}，不能新增、修改值，仅能通过属性修改；
+freeze  可以覆盖对象本身，不能修改对象属性值；
+-->
+
+let 		
+		1、通过let申明的变量，不允许重复申明；
+		2、不支持变量预解析，没有预解析，要先申明后使用；我们把当前作用域最开始到let申明的变量之间的区域称为 - 暂存死区
+		3、支持块级作用域；{}内定义的就是块级的；循环时，会产生块级作用域，获取当前i值，不需要加索引值了；
+
+const 	
+		1、常量申明，申明后的值是固定的，后期不能修改；所以必须先申明、赋值再使用；
+		2、其他特性和let一致；
+		3、如果是对象，不能新增修改{}里的值，但可以通过对象属性来修改里面的值；obj.x = 10;
+		4、如果是数组，能加，能删，能改；
+
+freeze
+	 	1、冻结对象内部数据，但不冻结对象本身；
+		2、和 var 一起用，不能修改内部数据，但是能修改对象本身，从而覆盖替换整个对象；
+		3、和 const 一起用，就都不能修改了；
+
+解构赋值		分【数组、对象】
+		1、申明{}中的变量；
+		2、根据{}中的变量，去获取后面对应的属性并赋值给变量，如果没有该属性，返回underfined；
+			let{left,a} = getComputedStyle(document.body); 能得到left值，a是underfined；
+		3、如果不想和属性名一致，可设置一个别名,加冒号起名；
+			let{ left:l,top:t };
+		4、如果是数组，就一一对应；
+			let[a,b,c] = ['a','b','c'];
+
+
+函数传参 	fn(a=10, b=10);有就覆盖，没有就为默认10，必传的写前面；
+
+剩余参数 	fn(arr, ...data),实参传给对应形参，后面不定参都归为了data，列如 splice；【剩余参数必须是尾参数】
+
+扩展运算符 	arr = [1,2,3]; Math.max(...arr); 	把数组转成参数序列【转成单个单个的】1，2，3；
+
+箭头函数		
+			当没有参数的时候  	var fn = () => {};  
+			当参数有多个的时候	var fn = (a, b) => {};  
+			当参数只有一个的时候 	var fn = a => {};
+			有且仅有一个形参的时候，可以省略参数的小括号 	var fn7 = r => {  return r * r * Math.PI; }
+			只有一条语句的时候，可以省略{}，同时该条语句的结果将作为该函数的返回值   var fn7 = r => r * r * Math.PI;
+			有多条语句或者返回值是一个对象，则必须使用{}
+<!--
+	// 函数申明 function fn1(a, b) {}
+	// 函数表达式 var fn2 = function(a, b) {}
+    
+			1. 箭头函数不能作为构造函数，也就是箭头函数不能使用new运算符
+	        2. 箭头函数的this永远指向当前申明作用域对象
+	            1. 普通函数this指向取决于调用
+	            2. 箭头函数this指向取决于申明
+	        3. 箭头函数没有arguments对象
+-->
+
+
+ 对象属性简洁表示法
+    *   当一个对象的key和对应的值（必须是一个变量名称）同名的话，那么可以简写成一个key
+		<!--var obj = {
+		    left: 100,
+		    top: 200,
+		    a,  // a: a
+		    b   // b: b
+		};
+		-->
+对象方法的简洁表示法
+<!--
+ 	let obj2 = {
+          a: a,
+          fn: function() {
+              console.log(1);
+          }
+      }
+      
+	let obj3 = {
+          a,
+          fn() {
+              console.log(1);
+          }
+      }
+      -->
+属性名表达式
+<!--
+var x = 'username';
+    let obj4 = {
+        //x: 'motao'  //这里的x不会作为变量表达式进行解析
+        [x]: 'motao'    //如果把key放在一个[]中，那么[]中的内容将被作为表达式进行解析
+    }
+-->
+
+<!---->
+
+迭代协议 * 迭代器
+    数组通过forof得到是数组的值，但是对于forof得到不一定是值，具体要看被迭代对象的迭代器如何实现
+    
+    for (var v in arr) {  console.log(v); }  得到的 v 是下标；
+    for (var v of arr) {  console.log(v); }  得到的 arr 单个值；
+    
+//如果我们希望一个对象能够被迭代，那么就需要去实现该对象的迭代协议和迭代器
+<!--
+// 迭代协议
+    obj[Symbol.iterator] = function() {
+//        let keys = ['x', 'y'];
+        let keys = Object.keys(obj);
+        let n = -1;
+        return {
+            next() {
+                if (n < keys.length-1) {
+                    //return {done: false, value: obj[keys[n++]]};
+                    //return {done: false, value: keys[n++]};
+                    n++;
+                    return {done: false, value: {
+                        k: keys[n],
+                        v: obj[keys[n]]
+                    }};
+                } else {
+                    return {done: true};
+                }
+
+            }
+        }
+    };
+
+    // 当我们通过forof去迭代obj的时候，js内部会去查找并调用obj的Symbol.iterator的方法
+    /*
+    * obj[Symbol.iterator]() => iterator.next() => 根据返回的对象中的done值，来决定是否已经完成或继续调用next，如果done为真，表示迭代结束通过忽略这次value值，如果为false，表示当前value有效，并继续下一次迭代（next()）
+    * 
+	也可以单个next的查：
+	 var objIterator = obj[Symbol.iterator]();
+//    console.log(objIterator);
+    console.log(objIterator.next());
+    console.log(objIterator.next());
+    console.log(objIterator.next());
+-->
+
+
+<!--==================================== 2017.07.28  es6  ====================================-->
+
+模板字符串： es6新增的
+			以 `` 作为模板字符串的起始和结束符
+			 1. 保持编辑格式
+			 2. 支持表达式:  ${表达式}
+
+Array.from 	把类数组转换成数组；
+			//能被扩展运算符运算的必须是可迭代的对象
+
+Array.of() 	创建数组
+			new Array(3) // length:3
+			Array.of(3) //[3] 	Array.of(1,2,3) //[1,2,3]
+
+find 		查找、返回符合的值，找不到返回undefined；找到就不再继续查找；
+findIndex  	查找、返回符合的索引值，找不到返回-1，找到就不再继续查找；
+			可以根据Object.is查找NaN，返回0；
+			[NaN].findIndex(y => Object.is(NaN, y))；
+			<!-- 都可以传3个参数
+				[1, 5, 10, 15].find(function(value, index, arr) {
+			  return value > 9;
+			}) // 10
+			-->		
+indexOf 		查找、返回索引值，不能查找NaN，
+
+fill 		使用给定值，填充一个数组。 ['a', 'b', 'c'].fill(7)  // [7, 7, 7]
+			接受第二个和第三个参数，用于指定填充的起始位置和结束位置
+			['a', 'b', 'c'].fill(7, 1, 2) // ['a', 7, 'c']
+			//fill方法从1号位开始，向原数组填充7，到2号位之前结束。
+
+keys 		//未实现或已废弃
+
+Set 			【主要用来去重】集合，和数组类似，但里面的值是唯一不重复的；
+ 			const set = new Set();
+ 			1、不能通过下标进行取值；
+ 			2. 集合是一个可迭代的对象；
+ 			3. 有一个属性：size，类似数组的length属性；
+				
+
+垃圾回收 	释放不再使用的代码；
+			强性的：还会使用，不释放；
+			弱性的：不管用不用，都释放；
+
+Map 			数据结构。它类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。也就是说，Object 结构提供了“字符串—值”的对应，Map结构提供了“值—值”的对应，是一种更完善的 Hash 结构实现。如果你需要“键值对”的数据结构，Map 比 Object 更合适。
+			let m1 = new Map();
+
+Generator函数
+
+class
+
+Promise
+
+padStart
+
+sign
+
+
+
+
+fetch  		功能和Ajax一样；
+			返回Promise，可以继续用then
+
+
+<!--==================================== github ====================================-->
+git 			工具
+github 		网站
+git clone 	克隆 	git clone https://github.com/oldkang/test2.git
+git status  状态
+git add  	添加到本地仓库，只是一个命令，而不是真的进行操作了。
+git add .  	添加所有
+
+git commit -m '说明'  	提交任务，比如前面的add，remove等；
+
+
+git push 	提交到网站；
+
+
+
+
+<!--==================================== 分割线 ====================================-->
+1、笔记整理；（查看课上有没有听懂）
+2、把课程案例自己做一遍；（哪些知识点还不会）
+3、独立做出练习；（知识点会运用了）
+
+
+重要：
+number转换。真假转换。
+
+
+
+
+【找到学习的方法】重要！！！
+
+0、 时间循环滚动；【点击头像加分】
+1、 div依次掉落：多次点击时，最后一个没到位就立即执行下一次动画了；
+2、 图片日期： 翻转动画；
+3、 倒计时-计算剩余时间；
+4、 选项卡套选项卡：同步问题；
+5、 点击变数字： 0 1 2 3 2 1 0 1 2 3；
+6、 新老师的讲课思路；
+7、 transform相关知识；
+8、 移动端知识；
+9、 js基础视频；
+10、整理所学知识，案列重写；
+11、前端面试题；
+12、Vue.js；
+
+
+
+
+
+
+172.160.0.45:8081
+
+
+1、桌面效果
+2、transform
+
+
+
+
+
+
+
+
+
+<!--dir 在浏览器读出所有属性；？？？-->
+</body>
+</html>
