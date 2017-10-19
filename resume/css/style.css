@@ -251,7 +251,7 @@ h3.clr3{
 }
 @media (min-width: 1366px){
     .company_details h6 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 @media (max-width: 1024px){
@@ -617,7 +617,15 @@ li.gray{
 .btn-primary {
     background-color: #3c925d;
 }
-
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #086d2f;
+    border-color: #285e8e;
+}
 .tree > ul{
     margin-left: 2em;
     margin-top: 10px;
@@ -669,5 +677,11 @@ li.gray{
     text-align: center;
     color: #2eb563;
     cursor: pointer;
-
+    margin-top: 20px;
+}
+.moreCompanyLink span{
+    background: #2fb463;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
