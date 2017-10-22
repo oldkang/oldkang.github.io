@@ -143,6 +143,7 @@ address span{
     font-size: .9rem;
 	/*font-weight:300;*/
 	line-height:1.7em;
+    overflow: hidden;
 }
 .cmpny1{
 	border-top:2px dashed #999;
