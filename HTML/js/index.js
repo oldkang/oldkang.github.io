@@ -80,31 +80,31 @@ $("#searchBtn").click(function (e) {
         for (var i=0; i<data.length; i++){
             if(siteArr[0]==data[i].start_position && siteArr[1]==data[i].end_position){
                 src = el("#fullView").src = data[i].vr_url;
-                el(".tips p").innerHTML = data[i].vr_desc;
-                setTimeout(function () {
-                    $(".tips").css({"display":"block"});
-                },1000);
+                // el(".tips p").innerHTML = data[i].vr_desc;
+                el(".tipsLi").innerHTML = data[i].vr_desc;
+                // setTimeout(function () {
+                //     $(".tips").css({"display":"block"});
+                // },1000);
                 break;
             }
         }
     }
-    bot = el(".close").getBoundingClientRect().bottom-32;
-    setTipSite();
+    // setTipSite();
 });
 
 var tipIs = true;
-$(".tips").click(function () {
-    if(tipIs){
-        $(this).animate({"bottom":"-" +this.offsetHeight + "px"});
-    }else {
-        if(!$(".icon").is(":hidden")){
-            $(".tips").animate({"bottom":"20px"});
-        }else{
-            setTipSite();
-        }
-    }
-    tipIs = !tipIs;
-});
+// $(".tips").click(function () {
+//     if(tipIs){
+//         $(this).animate({"bottom":"-" +this.offsetHeight + "px"});
+//     }else {
+//         if(!$(".icon").is(":hidden")){
+//             $(".tips").animate({"bottom":"20px"});
+//         }else{
+//             setTipSite();
+//         }
+//     }
+//     tipIs = !tipIs;
+// });
 //点击返回；
 el("#back").onclick = function () {
     if(src){
@@ -145,25 +145,26 @@ function selectFun(start,setId,nub) {
 //隐藏搜索框；
 $(".close").click(function () {
     $(".search").animate({"left":"-50%"});
+    bot = el(".close").getBoundingClientRect().bottom-32;
     setTimeout(function () {
         $(".icon").css({"top":bot+"px","display":"block"}).animate({"left":"0%"});
     },500);
-    var tipsH = "-"+el(".tips").offsetHeight+"px";
+    // var tipsH = "-"+el(".tips").offsetHeight+"px";
     //console.log(tipsH);
-    if( $(".tips").css("bottom") != tipsH ){
-        $(".tips").animate({"bottom":"20px"});
-    }
+    // if( $(".tips").css("bottom") != tipsH ){
+    //     $(".tips").animate({"bottom":"20px"});
+    // }
 });
 //显示搜索框；
 $(".icon").click(function () {
     $(this).animate({"left":"-10%"}).css({"display":"none"});
     $(".search").animate({"left":"50%"});
 
-    var tipsH = "-"+el(".tips").offsetHeight+"px";
+    // var tipsH = "-"+el(".tips").offsetHeight+"px";
     //console.log(tipsH);
-    if( $(".tips").css("bottom") != tipsH ){
-        setTipSite();
-    }
+    // if( $(".tips").css("bottom") != tipsH ){
+    //     setTipSite();
+    // }
 });
 
 //tip 位置；
@@ -179,7 +180,7 @@ function setTipSite() {
     }
 }
 $(window).resize(function () {
-    setTipSite();
+    // setTipSite();
     $(".icon").animate({"top":bot+"px"});
     var screenH = document.body.offsetHeight;
 });
