@@ -201,7 +201,7 @@ setInterval(function () {
     if(stop>(-20) ||stop<20){
         $(document).scrollTop(0);
     }
-},1000);
+},2000);
 
 
 
