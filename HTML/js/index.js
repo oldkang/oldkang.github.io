@@ -181,6 +181,8 @@ function setTipSite() {
 $(window).resize(function () {
     setTipSite();
     $(".icon").animate({"top":bot+"px"});
+    var screenH = document.body.offsetHeight;
+    $("#fullView").css({"height":screenH+"px"});
 });
 
 
