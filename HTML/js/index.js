@@ -196,8 +196,11 @@ $("select").each(function () {
 });
 
 setInterval(function () {
-    $(document).scrollTop(0);
-},200);
+    var stop = $(document).scrollTop();
+    if(stop>20 ||stop<20){
+        $(document).scrollTop(0);
+    }
+},1000);
 
 
 
