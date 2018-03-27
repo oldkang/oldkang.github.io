@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<iframe frameborder=0 marginheight=0 marginwidth=0 scrolling=no id="fullView" src=""></iframe>
+<div class="search">
+    <form action="" method="get">
+        <ul class="searchUl">
+            <li>
+                <select id="start" name="start">
+                    <option value="请选择起点" disabled="">请选择起点</option>
+                </select>
+            </li>
+            <li>
+                <select id="end" name="end">
+                    <option value="请选择终点" >请选择终点</option>
+                </select>
+            </li>
+            <li class="disTable">
+                <span><input id="searchBtn" type="button" value="搜索"></span>
+                <span><input id="back" type="button" value="返回"></span>
+            </li>
+        </ul>
+    </form>
+    <div class="close">×</div>
+</div>
+<div class="icon"></div>
+<div class="tips">
+    <p>温馨提示；</p>
+    <span></span>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/less.min.js"></script>
+<script src="js/function.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
