@@ -2,8 +2,6 @@
 
 //=========================定制===========================
 
-// window.addEventListener('touchstart',function(e){e.preventDefault();});
-// window.addEventListener('touchmove',function(e){e.preventDefault();});
 
 
 //=========================公用===========================
