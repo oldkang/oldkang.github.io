@@ -10,34 +10,36 @@
 
 </head>
 <body>
+<div class="scroll">
+    <iframe frameborder=0 marginheight=0 marginwidth=0 scrolling=no id="fullView" src=""></iframe>
+    <div class="search">
+        <form action="" method="get">
+            <ul class="searchUl">
+                <li>
+                    <select id="start" name="start">
+                        <option value="请选择起点" disabled="">请选择起点</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="end" name="end">
+                        <option value="请选择终点" >请选择终点</option>
+                    </select>
+                </li>
+                <li class="disTable">
+                    <span><input id="searchBtn" type="button" value="搜索"></span>
+                    <span><input id="back" type="button" value="返回"></span>
+                </li>
+            </ul>
+        </form>
+        <div class="close">×</div>
+    </div>
+    <div class="icon"></div>
+    <div class="tips">
+        <p>温馨提示；</p>
+        <span></span>
+    </div>
+</div>
 
-<iframe frameborder=0 marginheight=0 marginwidth=0 scrolling=no id="fullView" src=""></iframe>
-<div class="search">
-    <form action="" method="get">
-        <ul class="searchUl">
-            <li>
-                <select id="start" name="start">
-                    <option value="请选择起点" disabled="">请选择起点</option>
-                </select>
-            </li>
-            <li>
-                <select id="end" name="end">
-                    <option value="请选择终点" >请选择终点</option>
-                </select>
-            </li>
-            <li class="disTable">
-                <span><input id="searchBtn" type="button" value="搜索"></span>
-                <span><input id="back" type="button" value="返回"></span>
-            </li>
-        </ul>
-    </form>
-    <div class="close">×</div>
-</div>
-<div class="icon"></div>
-<div class="tips">
-    <p>温馨提示；</p>
-    <span></span>
-</div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/less.min.js"></script>
