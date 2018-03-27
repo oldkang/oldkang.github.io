@@ -187,18 +187,19 @@ $(window).resize(function () {
     alert($(document).scrollTop(0))
 });
 
-$("select").each(function () {
-    $(this).click(function () {
-        //alert(1);
-        //$(document).scrollTop(0);
-
-    })
-});
+// $("select").each(function () {
+//     $(this).click(function () {
+//         //alert(1);
+//         //$(document).scrollTop(0);
+//
+//     })
+// });
 
 setInterval(function () {
     var stop = $(document).scrollTop();
+    stop = stop >=0?stop:-stop;
     console.log(stop);
-    if(stop>(-20) && stop<0){
+    if(stop < 20){
         $(document).scrollTop(0);
     }
 },2000);
