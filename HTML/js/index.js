@@ -189,11 +189,17 @@ $(window).resize(function () {
 
 $("select").each(function () {
     $(this).click(function () {
-        alert(1);
-        $(document).scrollTop(0);
+        //alert(1);
+        //$(document).scrollTop(0);
 
     })
 });
+
+setInterval(function () {
+    $(document).scrollTop(0);
+},200);
+
+
 
 
 
