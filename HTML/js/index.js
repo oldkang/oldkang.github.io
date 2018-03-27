@@ -189,9 +189,10 @@ $(window).resize(function () {
 
 $("select").each(function () {
     $(this).click(function () {
-        var stop = $(document).scrollTop();
-        $(document).scrollTop(stop-30);
-
+        setTimeout(function () {
+            var stop = $(document).scrollTop();
+            $(document).scrollTop(stop-30);
+        },1000);
     })
 });
 
@@ -202,7 +203,7 @@ setInterval(function () {
     if(stop < 20){
         $(document).scrollTop(0);
     }
-},2000);
+},1000);
 
 
 
