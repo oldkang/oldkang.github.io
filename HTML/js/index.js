@@ -183,7 +183,8 @@ $(window).resize(function () {
     // setTipSite();
     $(".icon").animate({"top":bot+"px"});
     var screenH = document.body.offsetHeight;
-    $(document).scrollTop(0);
+
+    alert($(document).scrollTop(0))
 });
 
 
