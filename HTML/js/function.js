@@ -2,39 +2,31 @@
 
 //=========================定制===========================
 
+
+
+document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
 var overscroll = function(el) {
     el.addEventListener('touchstart', function() {
         var top = el.scrollTop
-            ,totalScroll = el.scrollHeight
-            ,currentScroll = top + el.offsetHeight;
+            , totalScroll = el.scrollHeight
+            , currentScroll = top + el.offsetHeight;
         if(top === 0) {
             el.scrollTop = 1;
-        }else if(currentScroll === totalScroll) {
+        } else if(currentScroll === totalScroll) {
             el.scrollTop = top - 1;
         }
     });
-
     el.addEventListener('touchmove', function(evt) {
         if(el.offsetHeight < el.scrollHeight)
             evt._isScroller = true;
     });
 };
-
 overscroll(document.querySelector('.scroll'));
 document.body.addEventListener('touchmove', function(evt) {
     if(!evt._isScroller) {
         evt.preventDefault();
     }
 });
-
-$(document).ready(function(){
-    function stopScrolling( touchEvent ) {
-        touchEvent.preventDefault();
-    }
-    document.addEventListener( 'touchstart' , stopScrolling , false );
-    document.addEventListener( 'touchmove' , stopScrolling , false );
-});
-
 
 //=========================公用===========================
 
