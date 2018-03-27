@@ -187,13 +187,13 @@ $(window).resize(function () {
     alert($(document).scrollTop(0))
 });
 
-// $("select").each(function () {
-//     $(this).click(function () {
-//         //alert(1);
-//         //$(document).scrollTop(0);
-//
-//     })
-// });
+$("select").each(function () {
+    $(this).click(function () {
+        var stop = $(document).scrollTop();
+        $(document).scrollTop(stop-30);
+
+    })
+});
 
 setInterval(function () {
     var stop = $(document).scrollTop();
