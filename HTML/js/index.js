@@ -80,7 +80,7 @@ $("#searchBtn").click(function (e) {
         for (var i=0; i<data.length; i++){
             if(siteArr[0]==data[i].start_position && siteArr[1]==data[i].end_position){
                 src = el("#fullView").src = data[i].vr_url;
-                el(".tips p").innerHTML = data[i].vr_desc + "出门向右前方行走100米  到达目的地出门向右前方行走100米  到达目的地";
+                el(".tips p").innerHTML = data[i].vr_desc;
                 setTimeout(function () {
                     $(".tips").css({"display":"block"});
                 },1000);
