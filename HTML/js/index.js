@@ -197,7 +197,8 @@ $("select").each(function () {
 
 setInterval(function () {
     var stop = $(document).scrollTop();
-    if(stop>20 ||stop<20){
+    console.log(stop);
+    if(stop>(-20) ||stop<20){
         $(document).scrollTop(0);
     }
 },1000);
