@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="autoScreen" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body,html{
+        height:100%;
+        overflow: hidden;
+    }
+    .yapiskan {
+        font-size: 24px;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: top .5s;
+</style>
+<header class=" yapiskan" onclick="downloadApp();"><img class="logo" src="http://m.xiaoqihui.com/static/wap/img/case_header.png" alt="">
+    <img class="open" src="http://m.xiaoqihui.com/static/wap/img/open.png" alt="" style=" width: 43px;height: 21px;position: absolute;right: 7.5%;top: .37rem;">
+</header>
+<iframe id="iframe_height" frameborder=0  src="http://f3214f09f33f.vxplo.cn/idea/1GuVGPS#p1" style="width: 103%;height: 623px;margin-top: 44px;margin-left: -0.5rem; "></iframe>
+
+<script>
+    var yapiskan = document.querySelector('.yapiskan');
+    var ifr = document.getElementById('iframe_height');
+    var autoScreen = document.getElementById('autoScreen');
+    if(ifr.src == 'http://f3214f09f33f.vxplo.cn/idea/1GuVGPS'){
+        autoScreen.content = '';
+        ifr.style.cssText = 'width: 750px; transform: scale(1.4); height: 1334px; position: relative; left: 50%; top: 50%; margin-top: -667px; margin-left: -375px;';
+        yapiskan.style.zIndex = '2';
+    }
+</script>
+</body>
+</html>
