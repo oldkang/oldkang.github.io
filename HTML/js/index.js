@@ -194,8 +194,8 @@ $("select").each(function () {
         //     // alert($(document).scrollTop());
         //     $(document).scrollTop(stop);
         // },500);
-        var bodyH = document.body.offsetHeight + 30;
-        $("#fullView").css({"height":bodyH+"px"});
+        // var bodyH = document.body.offsetHeight + 30;
+        $("#fullView").css({"margin-bottom":"-30px"});
         setZero();
     })
 });
@@ -206,9 +206,9 @@ function setZero() {
         stop = stop >=0?stop:-stop;
         console.log(stop);
         if(stop < 20){
+            $("#fullView").css({"margin-bottom":"0"});
             $(document).scrollTop(0);
             clearInterval(timer);
-            $("#fullView").css({"height":"100%"});
         }
     },500);
 }
