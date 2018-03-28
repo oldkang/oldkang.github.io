@@ -191,8 +191,8 @@ $("select").each(function () {
     $(this).click(function () {
         setTimeout(function () {
             var stop = $(document).scrollTop();
-            alert($(document).scrollTop());
-            // $(document).scrollTop(stop-20);
+            // alert($(document).scrollTop());
+            $(document).scrollTop(200);
         },1000);
     })
 });
