@@ -195,7 +195,10 @@ $("select").each(function () {
         //     $(document).scrollTop(stop);
         // },500);
         // var bodyH = document.body.offsetHeight + 30;
-        $("#fullView").css({"bottom":"-100px","position":"fixed"});
+        var screenW = document.body.offsetWidth;
+        if(screenW <= "768"){
+            $("#fullView").css({"bottom":"-100px","position":"fixed"});
+        }
         setZero();
     })
 });
