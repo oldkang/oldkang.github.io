@@ -190,7 +190,7 @@ $(window).resize(function () {
 $("select").each(function () {
     $(this).click(function () {
         setTimeout(function () {
-            var stop = $(document).scrollTop()+30;
+            var stop = $(document).scrollTop();
             // alert($(document).scrollTop());
             $(document).scrollTop(stop);
         },500);
