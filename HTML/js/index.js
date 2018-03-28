@@ -215,10 +215,10 @@ function setZero() {
 
 //
 // document.addEventListener("DOMContentLoaded", ready, false);
-// document.addEventListener("touchmove", function(evt){
-//     // console.log("document.touchmove");
-//     evt.preventDefault();
-// }, false);
+document.addEventListener("touchmove", function(evt){
+    // console.log("document.touchmove");
+    evt.preventDefault();
+}, false);
 //
 // function ready(){
 //     var container = document.getElementsByClassName("scollpane")[0];
