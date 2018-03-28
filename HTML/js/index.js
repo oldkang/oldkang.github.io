@@ -89,7 +89,7 @@ $("#searchBtn").click(function (e) {
             }
         }
     }
-    // setTipSite();
+    setZero();
 });
 
 var tipIs = true;
@@ -189,15 +189,15 @@ $(window).resize(function () {
 
 $("select").each(function () {
     $(this).click(function () {
-        // setTimeout(function () {
-        //     var stop = $(document).scrollTop();
-        //     // alert($(document).scrollTop());
-        //     $(document).scrollTop(200);
-        // },1000);
+        setTimeout(function () {
+            var stop = $(document).scrollTop()+30;
+            // alert($(document).scrollTop());
+            $(document).scrollTop(stop);
+        },500);
         setZero();
     })
 });
-
+setZero();
 function setZero() {
     var timer = setInterval(function () {
         var stop = $(document).scrollTop();
@@ -207,7 +207,7 @@ function setZero() {
             $(document).scrollTop(0);
             clearInterval(timer);
         }
-    },1000);
+    },500);
 }
 
 
