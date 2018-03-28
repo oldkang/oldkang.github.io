@@ -206,31 +206,19 @@ function setZero() {
         stop = stop >=0?stop:-stop;
         //console.log(stop);
         if(stop < 20){
-            $("#fullView").css({"bottom":"0px","position":"relative"});
+            $("#fullView").css({"bottom":"0px","position":"fixed"});
             $(document).scrollTop(0);
             clearInterval(timer);
         }
     },500);
 }
 
-//
-document.addEventListener("DOMContentLoaded", ready, false);
+
 document.addEventListener("touchmove", function(evt){
-    // console.log("document.touchmove");
     evt.preventDefault();
 }, false);
 
-function ready(){
-    var container = document.getElementsByClassName("scollpane")[0];
-    var subcontainer = container.children[0];
-    var subsubcontainer = container.children[0].children[0];
 
-    container.addEventListener("touchmove", function(evt){
-        if(subsubcontainer.getBoundingClientRect().height > subcontainer.getBoundingClientRect().height){
-            evt.stopPropagation();
-        }
-    }, false);
-}
 
 
 
