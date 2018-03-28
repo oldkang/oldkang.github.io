@@ -189,22 +189,27 @@ $(window).resize(function () {
 
 $("select").each(function () {
     $(this).click(function () {
-        setTimeout(function () {
-            var stop = $(document).scrollTop();
-            // alert($(document).scrollTop());
-            $(document).scrollTop(200);
-        },1000);
+        // setTimeout(function () {
+        //     var stop = $(document).scrollTop();
+        //     // alert($(document).scrollTop());
+        //     $(document).scrollTop(200);
+        // },1000);
+        setZero();
     })
 });
 
-setTimeout(function () {
-    // var stop = $(document).scrollTop();
-    // stop = stop >=0?stop:-stop;
-    // console.log(stop);
-    // if(stop < 10){
-        $(document).scrollTop(0);
-    // }
-},1000);
+function setZero() {
+    var timer = setInterval(function () {
+        var stop = $(document).scrollTop();
+        stop = stop >=0?stop:-stop;
+        console.log(stop);
+        if(stop < 20){
+            $(document).scrollTop(0);
+            clearInterval(timer);
+        }
+    },1000);
+}
+
 
 
 
