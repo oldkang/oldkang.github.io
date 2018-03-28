@@ -189,11 +189,13 @@ $(window).resize(function () {
 
 $("select").each(function () {
     $(this).click(function () {
-        setTimeout(function () {
-            var stop = $(document).scrollTop();
-            // alert($(document).scrollTop());
-            $(document).scrollTop(stop);
-        },500);
+        // setTimeout(function () {
+        //     var stop = $(document).scrollTop();
+        //     // alert($(document).scrollTop());
+        //     $(document).scrollTop(stop);
+        // },500);
+        var bodyH = document.body.offsetHeight + 30;
+        $("#fullView").css({"height":bodyH+"px"});
         setZero();
     })
 });
@@ -206,6 +208,7 @@ function setZero() {
         if(stop < 20){
             $(document).scrollTop(0);
             clearInterval(timer);
+            $("#fullView").css({"height":"100%"});
         }
     },500);
 }
