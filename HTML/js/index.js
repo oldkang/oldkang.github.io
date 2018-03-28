@@ -191,18 +191,19 @@ $("select").each(function () {
     $(this).click(function () {
         setTimeout(function () {
             var stop = $(document).scrollTop();
-            $(document).scrollTop(stop-20);
+            console.log($(document).scrollTop());
+            // $(document).scrollTop(stop-20);
         },1000);
     })
 });
 
-setInterval(function () {
-    var stop = $(document).scrollTop();
-    stop = stop >=0?stop:-stop;
-    console.log(stop);
-    if(stop < 10){
+setTimeout(function () {
+    // var stop = $(document).scrollTop();
+    // stop = stop >=0?stop:-stop;
+    // console.log(stop);
+    // if(stop < 10){
         $(document).scrollTop(0);
-    }
+    // }
 },1000);
 
 
