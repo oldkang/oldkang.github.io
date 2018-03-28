@@ -204,7 +204,7 @@ function setZero() {
     var timer = setInterval(function () {
         var stop = $(document).scrollTop();
         stop = stop >=0?stop:-stop;
-        console.log(stop);
+        //console.log(stop);
         if(stop < 20){
             $("#fullView").css({"bottom":"0px","position":"relative"});
             $(document).scrollTop(0);
@@ -214,23 +214,23 @@ function setZero() {
 }
 
 //
-// document.addEventListener("DOMContentLoaded", ready, false);
+document.addEventListener("DOMContentLoaded", ready, false);
 document.addEventListener("touchmove", function(evt){
     // console.log("document.touchmove");
     evt.preventDefault();
 }, false);
-//
-// function ready(){
-//     var container = document.getElementsByClassName("scollpane")[0];
-//     var subcontainer = container.children[0];
-//     var subsubcontainer = container.children[0].children[0];
-//
-//     container.addEventListener("touchmove", function(evt){
-//         if(subsubcontainer.getBoundingClientRect().height > subcontainer.getBoundingClientRect().height){
-//             evt.stopPropagation();
-//         }
-//     }, false);
-// }
+
+function ready(){
+    var container = document.getElementsByClassName("scollpane")[0];
+    var subcontainer = container.children[0];
+    var subsubcontainer = container.children[0].children[0];
+
+    container.addEventListener("touchmove", function(evt){
+        if(subsubcontainer.getBoundingClientRect().height > subcontainer.getBoundingClientRect().height){
+            evt.stopPropagation();
+        }
+    }, false);
+}
 
 
 
