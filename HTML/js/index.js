@@ -184,7 +184,7 @@ $(window).resize(function () {
     $(".icon").animate({"top":bot+"px"});
     var screenH = document.body.offsetHeight;
 
-    alert($(document).scrollTop(0))
+    // alert($(document).scrollTop(0))
 });
 
 $("select").each(function () {
@@ -216,7 +216,7 @@ function setZero() {
 
 document.addEventListener("DOMContentLoaded", ready, false);
 document.addEventListener("touchmove", function(evt){
-    console.log("document.touchmove");
+    // console.log("document.touchmove");
     evt.preventDefault();
 }, false);
 
