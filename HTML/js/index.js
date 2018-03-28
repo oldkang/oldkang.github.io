@@ -195,7 +195,7 @@ $("select").each(function () {
         //     $(document).scrollTop(stop);
         // },500);
         // var bodyH = document.body.offsetHeight + 30;
-        $("#fullView").css({"margin-bottom":"-30px"});
+        // $("#fullView").css({"margin-bottom":"-30px"});
         setZero();
     })
 });
@@ -206,7 +206,7 @@ function setZero() {
         stop = stop >=0?stop:-stop;
         console.log(stop);
         if(stop < 20){
-            $("#fullView").css({"margin-bottom":"0"});
+            // $("#fullView").css({"margin-bottom":"0"});
             $(document).scrollTop(0);
             clearInterval(timer);
         }
@@ -214,7 +214,23 @@ function setZero() {
 }
 
 
+document.addEventListener("DOMContentLoaded", ready, false);
+document.addEventListener("touchmove", function(evt){
+    console.log("document.touchmove");
+    evt.preventDefault();
+}, false);
 
+function ready(){
+    var container = document.getElementsByClassName("scollpane")[0];
+    var subcontainer = container.children[0];
+    var subsubcontainer = container.children[0].children[0];
+
+    container.addEventListener("touchmove", function(evt){
+        if(subsubcontainer.getBoundingClientRect().height > subcontainer.getBoundingClientRect().height){
+            evt.stopPropagation();
+        }
+    }, false);
+}
 
 
 
