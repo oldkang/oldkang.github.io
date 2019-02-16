@@ -149,7 +149,7 @@
             <!-- 非收藏时 去掉 aui-text-danger -->
             <i class="iconfont icon-star1 "></i> 收藏
         </div>
-        <div class="aui-col-xs-8 aui-btn-danger" id="bid">出价</div>
+        <div class="aui-col-xs-8 aui-btn-danger" id="bid" style="z-index: 1000">出价</div>
         <!--<div class="aui-col-xs-8 over">已结束</div>-->
     </footer>
 
@@ -159,7 +159,7 @@
 
 
     <!--弹窗  aui-mask-in -->
-    <div class="aui-mask aui-mask-in" id="aui-mask"></div>
+    <div class="aui-mask " id="aui-mask"></div>
 
     <!--保证金提示 aui-dialog-in -->
     <div class="aui-dialog ">
@@ -294,8 +294,8 @@
     var mask = document.querySelector('#aui-mask')
         ,bid = document.querySelector('#bid');
 
-    mask.onclick = function () {
-        mask.classList.remove('aui-mask-in')
+    bid.onclick = function () {
+        mask.classList.add('aui-mask-in')
     }
 
     // // 收藏
