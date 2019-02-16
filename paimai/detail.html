@@ -288,7 +288,7 @@
     });
     console.log(slide3.pageCount());
 </script>　　
-<script src="js/jquery-3.1.1.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 
     var mask = document.querySelector('#aui-mask')
@@ -315,8 +315,8 @@
 
     // 关闭
     $('.closePop').click(function () {
-        // $('.aui-mask').removeClass('aui-mask-in');
-        mask.style.display = 'none';
+        $('.aui-mask').removeClass('aui-mask-in');
+        // mask.style.display = 'none';
         $('.aui-dialog').removeClass('aui-dialog-in');
     });
 
