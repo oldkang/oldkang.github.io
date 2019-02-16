@@ -300,16 +300,18 @@
 
     // 出价
     $('#bid').click(function () {
+        alert(mask.classList);
         // $('.aui-mask').addClass('aui-mask-in');
         // document.querySelector('.aui-mask').className = 'aui-mask aui-mask-in';
         mask.style.display = 'block';
         $('.aui-mask').removeClass('aui-mask-in').eq(0).addClass('aui-mask-in');
         $('.aui-dialog').removeClass('aui-dialog-in').eq(0).addClass('aui-dialog-in');
+        alert(mask.classList);
     });
 
     // 关闭
     $('.closePop').click(function () {
-        $('.aui-mask').removeClass('aui-mask-in');
+        // $('.aui-mask').removeClass('aui-mask-in');
         mask.style.display = 'none';
         $('.aui-dialog').removeClass('aui-dialog-in');
     });
