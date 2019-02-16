@@ -159,7 +159,7 @@
 
 
     <!--弹窗  aui-mask-in -->
-    <div class="aui-mask" id="aui-mask" style="display: none"></div>
+    <div class="aui-mask" id="aui-mask"></div>
 
     <!--保证金提示 aui-dialog-in -->
     <div class="aui-dialog ">
@@ -288,43 +288,47 @@
     });
     console.log(slide3.pageCount());
 </script>　　
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
 <script>
 
-    var mask = document.querySelector('#aui-mask');
+    var mask = document.querySelector('#aui-mask')
+        ,bid = document.querySelector('#bid');
 
-    // 收藏
-    $("#collect").click(function(){
-        $(".icon-star1").toggleClass("aui-text-danger");
-    });
+    bid.onclick = function () {
+        mask.classList.add('aui-mask-in')
+    }
 
-    // 出价
-    $('#bid').click(function () {
-
-        // $('.aui-mask').addClass('aui-mask-in');
-        // document.querySelector('.aui-mask').className = 'aui-mask aui-mask-in';
-        mask.style.display = 'block';
-        $('.aui-mask').removeClass('aui-mask-in').eq(0).addClass('aui-mask-in');
-        $('.aui-dialog').removeClass('aui-dialog-in').eq(0).addClass('aui-dialog-in');
-        $('#truePay').html(mask.className)
-    });
-
-    // 关闭
-    $('.closePop').click(function () {
-        // $('.aui-mask').removeClass('aui-mask-in');
-        mask.style.display = 'none';
-        $('.aui-dialog').removeClass('aui-dialog-in');
-    });
-
-    // 确认缴纳
-    $('#truePay').click(function () {
-        $('.aui-dialog').removeClass('aui-dialog-in').eq(1).addClass('aui-dialog-in');
-    });
-
-    // 支付
-    $('#pay').click(function () {
-        $('.aui-dialog').removeClass('aui-dialog-in').eq(3).addClass('aui-dialog-in');
-    });
+    // // 收藏
+    // $("#collect").click(function(){
+    //     $(".icon-star1").toggleClass("aui-text-danger");
+    // });
+    //
+    // // 出价
+    // $('#bid').click(function () {
+    //
+    //     $('.aui-mask').addClass('aui-mask-in');
+    //     // document.querySelector('.aui-mask').className = 'aui-mask aui-mask-in';
+    //     // mask.style.display = 'block';
+    //     // $('.aui-dialog').removeClass('aui-dialog-in').eq(0).addClass('aui-dialog-in');
+    //     // $('#truePay').html(mask.className)
+    // });
+    //
+    // // 关闭
+    // $('.closePop').click(function () {
+    //     // $('.aui-mask').removeClass('aui-mask-in');
+    //     mask.style.display = 'none';
+    //     $('.aui-dialog').removeClass('aui-dialog-in');
+    // });
+    //
+    // // 确认缴纳
+    // $('#truePay').click(function () {
+    //     $('.aui-dialog').removeClass('aui-dialog-in').eq(1).addClass('aui-dialog-in');
+    // });
+    //
+    // // 支付
+    // $('#pay').click(function () {
+    //     $('.aui-dialog').removeClass('aui-dialog-in').eq(3).addClass('aui-dialog-in');
+    // });
 
 </script>
 
