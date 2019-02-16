@@ -287,8 +287,8 @@
         'dotPosition':'center'
     });
     console.log(slide3.pageCount());
-</script>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</script>　　
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
 
     var mask = document.querySelector('#aui-mask');
@@ -303,6 +303,7 @@
         // $('.aui-mask').addClass('aui-mask-in');
         // document.querySelector('.aui-mask').className = 'aui-mask aui-mask-in';
         mask.style.display = 'block';
+        $('.aui-mask').removeClass('aui-mask-in').eq(0).addClass('aui-mask-in');
         $('.aui-dialog').removeClass('aui-dialog-in').eq(0).addClass('aui-dialog-in');
     });
 
