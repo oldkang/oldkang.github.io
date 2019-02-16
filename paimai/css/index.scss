@@ -12,6 +12,7 @@ a ,a:active ,a:visited ,a:hover{
 .header{
   border-bottom: 1px solid #eee;
   background-color:#014951;
+  background-color: #547473;
   color: #f9c754;
 
   h1{
@@ -137,11 +138,11 @@ a ,a:active ,a:visited ,a:hover{
 
 nav{
   display: flex;
-  background: rgb(0,80,86);
-  background: -moz-linear-gradient(top, rgb(0,80,86) 0%, rgb(3,50,58) 100%);
-  background: -webkit-linear-gradient(top, rgb(0,80,86) 0%,rgb(3,50,58) 100%);
-  background: linear-gradient(to bottom, rgb(0,80,86) 0%,rgb(3,50,58) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005056', endColorstr='#03323a',GradientType=0 );
+  background: #547473;
+  background: -moz-linear-gradient(top,  #547473 0%, #154148 100%);
+  background: -webkit-linear-gradient(top,  #547473 0%,#154148 100%);
+  background: linear-gradient(to bottom,  #547473 0%,#154148 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#547473', endColorstr='#154148',GradientType=0 );
 
   position: fixed;
   left: 0;
