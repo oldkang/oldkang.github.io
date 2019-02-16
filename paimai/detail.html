@@ -291,6 +291,8 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 
+    var mask = document.querySelector('#aui-mask');
+
     // 收藏
     $("#collect").click(function(){
         $(".icon-star1").toggleClass("aui-text-danger");
@@ -300,14 +302,14 @@
     $('#bid').click(function () {
         // $('.aui-mask').addClass('aui-mask-in');
         // document.querySelector('.aui-mask').className = 'aui-mask aui-mask-in';
-        $('#aui-mask').css('display','block');
+        mask.style.display = 'block';
         $('.aui-dialog').removeClass('aui-dialog-in').eq(0).addClass('aui-dialog-in');
     });
 
     // 关闭
     $('.closePop').click(function () {
         // $('.aui-mask').removeClass('aui-mask-in');
-        $('#aui-mask').css('display','none');
+        mask.style.display = 'none';
         $('.aui-dialog').removeClass('aui-dialog-in');
     });
 
