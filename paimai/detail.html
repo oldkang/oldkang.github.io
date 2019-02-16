@@ -159,7 +159,7 @@
 
 
     <!--弹窗  aui-mask-in -->
-    <div class="aui-mask aui-mask-in"></div>
+    <div class="aui-mask" id="aui-mask" style="visibility: visible;display: none"></div>
 
     <!--保证金提示 aui-dialog-in -->
     <div class="aui-dialog ">
@@ -299,13 +299,15 @@
     // 出价
     $('#bid').click(function () {
         // $('.aui-mask').addClass('aui-mask-in');
-        document.querySelector('.aui-mask').className = 'aui-mask aui-mask-in';
+        // document.querySelector('.aui-mask').className = 'aui-mask aui-mask-in';
+        $('#aui-mask').css('display','block');
         $('.aui-dialog').removeClass('aui-dialog-in').eq(0).addClass('aui-dialog-in');
     });
 
     // 关闭
     $('.closePop').click(function () {
-        $('.aui-mask').removeClass('aui-mask-in');
+        // $('.aui-mask').removeClass('aui-mask-in');
+        $('#aui-mask').css('display','none');
         $('.aui-dialog').removeClass('aui-dialog-in');
     });
 
