@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aac4302e-3882-484b-83f9-5c249adf7191" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/paimai/css/detail.css" afterPath="$PROJECT_DIR$/paimai/css/detail.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/detail.css.map" afterPath="$PROJECT_DIR$/paimai/css/detail.css.map" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/detail.min.css" afterPath="$PROJECT_DIR$/paimai/css/detail.min.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/order.css" afterPath="$PROJECT_DIR$/paimai/css/order.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/order.css.map" afterPath="$PROJECT_DIR$/paimai/css/order.css.map" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/order.min.css" afterPath="$PROJECT_DIR$/paimai/css/order.min.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/site.css" afterPath="$PROJECT_DIR$/paimai/css/site.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/site.css.map" afterPath="$PROJECT_DIR$/paimai/css/site.css.map" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/site.min.css" afterPath="$PROJECT_DIR$/paimai/css/site.min.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/subPublic.css" afterPath="$PROJECT_DIR$/paimai/css/subPublic.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/subPublic.css.map" afterPath="$PROJECT_DIR$/paimai/css/subPublic.css.map" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/subPublic.min.css" afterPath="$PROJECT_DIR$/paimai/css/subPublic.min.css" />
-      <change beforePath="$PROJECT_DIR$/paimai/css/subPublic.scss" afterPath="$PROJECT_DIR$/paimai/css/subPublic.scss" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +19,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/paimai/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="335" column="7" lean-forward="false" selection-start-line="335" selection-start-column="7" selection-end-line="335" selection-end-column="7" />
+            <state relative-caret-position="658">
+              <caret line="294" column="43" lean-forward="false" selection-start-line="294" selection-start-column="40" selection-end-line="294" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -40,6 +28,7 @@
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -209,15 +198,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550320207500</updated>
-      <workItem from="1550320208717" duration="7049000" />
+      <workItem from="1550320208717" duration="7591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7049000" />
+    <option name="totallyTimeSpent" value="7591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24012639" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -226,7 +216,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3167702" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3167702" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -267,8 +257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/paimai/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="335" column="7" lean-forward="false" selection-start-line="335" selection-start-column="7" selection-end-line="335" selection-end-column="7" />
+        <state relative-caret-position="658">
+          <caret line="294" column="43" lean-forward="false" selection-start-line="294" selection-start-column="40" selection-end-line="294" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -276,6 +266,7 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
