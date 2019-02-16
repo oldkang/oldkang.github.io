@@ -53,12 +53,13 @@
                 </div>
 
                 <!--图上信息-->
-                <div class="line">
+                <div class="line" style="background: #999;">
                     <div class="aui-info info">
                         <div class="aui-info-item">
                             <span class="aui-margin-l-5">已结束</span>
                         </div>
-                        <div class="aui-info-item">浏览量：1234</div>
+                        <div class="aui-info-item" style="line-height: .533333rem;
+    font-weight: 700;">浏览量：1234</div>
                     </div>
                 </div>
 
@@ -66,14 +67,14 @@
             <div class="aui-slide-page-wrap"><!--分页容器--></div>
         </div>
 
-        <div class="aui-card-list-header">图书标题</div>
+        <div class="aui-card-list-header">《不愧三餐》</div>
 
         <!--获得者-->
         <div class="aui-info">
             <div class="aui-info-item">
                 <span class="aui-margin-l-5">最高出价：</span> <span class="aui-text-danger detail-price">￥44</span>
             </div>
-            <div class="aui-info-item">领先者：张三</div>
+            <div class="aui-info-item">领先者：李晓琪</div>
         </div>
 
         <!--加价信息-->
@@ -87,7 +88,7 @@
     <!--出价过程 标题-->
     <div class="aui-card-list-header">
         <div><span class=""> 出价过程</span></div>
-        <a href="offer-price.html"><i class="aui-iconfont aui-icon-more"></i></a>
+        <a href="offer-price.html" style="padding:0 10px 0 20px; margin-right: -10px;"><i class="aui-iconfont aui-icon-more"></i></a>
     </div>
 
     <!--出价过程 列表-->
@@ -96,7 +97,7 @@
             <img src="images/1.jpg" style="height: 2rem;" class="aui-img-round" />
         </div>
         <div class="aui-card-list-user-name">
-            <div>姓名</div>
+            <div>张青</div>
             <small class="aui-label aui-label-danger aui-label-outlined">出局</small>
         </div>
         <div class="aui-card-list-user-info aui-row">
@@ -110,7 +111,7 @@
             <img src="images/2.jpg" style="height: 2rem;" class="aui-img-round" />
         </div>
         <div class="aui-card-list-user-name">
-            <div>姓名</div>
+            <div>曹新华</div>
             <small class="aui-label aui-label-danger aui-label-outlined">出局</small>
         </div>
         <div class="aui-card-list-user-info aui-row">
@@ -144,7 +145,7 @@
 
     <!--底部 按钮-->
     <footer class="aui-row aui-bar aui-bar-tab footerbar">
-        <div class="aui-col-xs-4" id="collect">
+        <div class="aui-col-xs-4" id="collect" style="line-height: 2.25rem; position: relative;z-index: 111;">
             <!-- 非收藏时 去掉 aui-text-danger -->
             <i class="iconfont icon-star1 "></i> 收藏
         </div>
@@ -158,7 +159,7 @@
 
 
     <!--弹窗  aui-mask-in -->
-    <div class="aui-mask "></div>
+    <div class="aui-mask aui-mask-in"></div>
 
     <!--保证金提示 aui-dialog-in -->
     <div class="aui-dialog ">
