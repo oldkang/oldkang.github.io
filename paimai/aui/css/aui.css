@@ -432,6 +432,7 @@ img {
 .aui-mask.aui-mask-in {
 	visibility: visible;
   	opacity: 1;
+	display: block;
 }
 .aui-mask.aui-mask-out {
 	opacity: 0;
@@ -1971,7 +1972,7 @@ input[type="search"]::-webkit-search-cancel-button {
           	transform: translate3d(0, 0, 0) scale(1.2);
  	-webkit-transition-property: -webkit-transform, opacity;
           	transition-property: transform, opacity;
-    /*display: none;*/
+    display: none;
 }
 .aui-dialog-header {
     padding: 0.5rem 0.75rem 0 0.75rem;

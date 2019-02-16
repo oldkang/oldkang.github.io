@@ -273,10 +273,11 @@
   transition-duration: 300ms;
   -webkit-transform: translate3d(0, -45%, 0) scale(1);
   transform: translate3d(0, -45%, 0) scale(1);
+  display: block;
 }
 
 .aui-mask{
-  opacity: 1;
+  //opacity: 1;
 }
 
 
