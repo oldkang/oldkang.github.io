@@ -1,0 +1,219 @@
+@charset "utf-8";
+@import "subPublic";
+
+
+
+// 订单
+
+.checkout-pay{
+  position: fixed;
+}
+
+.order{
+  margin-bottom: 4rem;
+
+  // 待支付
+  .wait-pay{
+    text-align: center;
+    background: #fdecb9;
+    padding: .75rem;
+
+    .title{
+      color: #ff8d00;
+      margin-bottom: .3rem;
+    }
+  }
+
+  // 没地址提示
+  .site-tips{
+     justify-content: left;
+       background-color: rgba(0,0,0,.4);
+   }
+
+  // 商家名称
+  .order-title{
+
+    .aui-list-item-media{
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  // 单个商品标题
+  .aui-list .aui-list-item-title{
+    max-width: 80%;
+    font-size: .72rem;
+
+  }
+
+  // 单个商品
+  .orderLi{
+
+    .aui-list-item-right{
+      text-align: center;
+      
+      p{
+        color: #ec1111;
+        font-size: .75rem;
+      }
+    }
+  }
+  // 价钱
+  .order-price{
+
+    b{
+      display: inline-block;
+      margin: 0 .2rem;
+    }
+    .one-price{
+      font-size: .8rem;
+      font-weight: bold;
+    }
+  }
+  //
+  .order-btn{
+    text-align: right;
+  }
+
+
+  .timeover{
+    background: #fff;
+    color: #ff8d00;
+    padding: .75rem;
+  }
+
+  .delivery-address-title{
+    padding-bottom: 0;
+    margin-bottom: -.5rem;
+    font-weight: bold;
+  }
+}
+
+
+// 订单中 弹窗付款
+.order-list-pay{
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+
+  //付款时间
+  .order-list-pay-time{
+    font-size: .8rem;
+  }
+
+  // 支付选项 li
+  .order-list-pay-icon{
+
+    .pay-change{
+      float: right;
+      color: #999;
+    }
+    .aui-radio{
+      margin-right: .4rem;
+    }
+    .aui-img-round{
+      width:1.2rem;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      margin-right: .3rem;
+    }
+    .iconfont{
+      margin-right: .3rem;
+      font-size: 1.3rem;
+      vertical-align: middle;
+    }
+    .icon-wenxin{
+      color: #09ba07;
+    }
+    .icon-umidd17{
+      color: #1296db;
+    }
+
+  }
+
+  .order-list-pay-money{
+    font-size: .9rem;
+
+    span{
+      font-weight: bold;
+      margin-left: .5rem;
+    }
+  }
+
+}
+
+
+
+//我的页
+
+.my{
+
+  .aui-badge{
+    top: .7rem;
+    left: inherit;
+    right: 12%;
+  }
+
+  .payBar{
+    text-align: center;
+    background: #fff;
+    padding: .3rem 0;
+    color: #999;
+
+    .aui-col-xs-3{
+      border-right: 1px solid #ececec;
+    }
+
+    span{
+      color: #333;
+    }
+
+  }
+
+
+
+}
+
+
+// 我的参拍
+.pai{
+
+  li{
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .iconfont{
+    font-size: 5rem;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    line-height: 1;
+  }
+  .icon-yijieshu1,.icon-yiguoqi2{
+    color: #616161;
+  }
+  .icon-jinhangzhong--{
+    color: #a90101;
+  }
+}
+
+img{
+  width: 100%;
+}
+
+.icon-money{
+  color: #868585;
+}
+
+
+
+
+

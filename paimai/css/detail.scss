@@ -1,0 +1,287 @@
+@charset "utf-8";
+@import "subPublic";
+
+
+// 详情页
+.detailPage{
+  padding-bottom: 2.5rem;
+
+  .aui-bar-nav{
+    border-bottom: none;
+  }
+
+  // banner区
+  .detail{
+    margin-bottom: 0;
+
+    .aui-info{
+      margin: 0 0.533333rem;
+      padding-top: 0;
+      color: #999;
+    }
+    .info{
+      color: #fff;
+    }
+
+  }
+
+
+  // 图上信息
+  .line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    padding:0.133333rem 0;
+
+    .aui-info{
+      padding: 0;
+      color: #fff;
+    }
+  }
+
+  // 分页容器
+  .aui-slide-page-wrap{
+    bottom:1.333333rem;
+    z-index: 9;
+  }
+  // 价钱
+  .detail-price{
+    font-size: .8rem;
+  }
+  // 加价信息
+  .add-price{
+    padding: 0 2rem;
+  }
+  // 介绍
+  .about{
+    background-color: #fff;
+    padding-bottom: 0.266667rem;
+
+    .aui-content{
+      color: #666;
+      font-size: 0.673333rem;
+
+      img{
+        margin: .2rem 0;
+      }
+
+    }
+    .aui-content-padded{
+      margin: .5rem .75rem;
+    }
+
+  }
+  // 底部按钮
+  .footerbar{
+    display: flex;
+    align-items: center;
+
+    .aui-col-xs-8{
+      background: #006665;
+      display: block;
+      line-height: 2.25rem;
+      color: #fff;
+    }
+    .over{
+      background: #999;
+    }
+    .icon-star1{
+      font-size: 1rem;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+.aui-mask{
+  z-index: 11;
+}
+
+
+// 弹窗
+
+.pop-header{
+  border-bottom: 1px solid #ccc;
+
+  .pop-header_l{
+    float: left;
+    color: #999;
+    font-size: .3rem;
+    padding: 0 .3rem;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    border-radius: .2rem;
+    border: 1px solid #ccc;
+    display: inline-block;
+  }
+
+}
+
+.pop-body{
+  padding: .5rem;
+  text-align: left;
+  clear: both;
+
+  h4{
+    text-align: center;
+    color: #999;
+    margin-bottom: .6rem;
+
+    span{
+      font-size: 1.2rem;
+      display: inline-block;
+      padding: 0 1rem 0;
+      color: #333;
+      vertical-align: middle;
+    }
+  }
+  p{
+    color: #333;
+
+  }
+  .aui-list-item-inner{
+    font-size: 0.7rem;
+    margin:0.533333rem 0 0.266667rem 0;
+
+    .aui-checkbox{
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .aui-list-item-right{
+      position: relative;
+      padding-left: 1.5rem;
+
+      .aui-checkbox{
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}
+
+.false{
+
+  p{
+    text-align: center;
+    color: #999;
+  }
+  .aui-iconfont{
+    border: 1px solid #ccc;
+    padding: .1rem;    font-size: .1rem;
+    color: #333;
+  }
+}
+
+.aui-dialog-footer{
+  padding: .5rem;
+}
+
+.pop-body-table{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  color: #999;
+
+
+}
+.pop-body-table-head{
+  background: #e6e6e6;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  font-size: .6rem;
+
+  span{
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.pop-body-table-body{
+  text-align: center;  border-left: 1px solid #ccc;
+
+  span{
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+}
+.aui-dialog-in{
+  z-index: 1000;
+}
+.setPrice{
+  min-width: 7rem;
+}
+
+
+
+
+.earnestMoney{
+
+
+  .aui-list-item-text{
+    color: #333;
+  }
+  .aui-list .aui-list-item-title{
+    color: #777;
+  }
+
+
+
+}
+
+
+
+.orderList{
+
+  li{
+    margin-bottom:0.533333rem;
+    background: #fff;
+  }
+}
+
+.offer-price-list{
+
+  .aui-card-list-header.aui-card-list-user{
+
+    border-bottom: 1px solid #ccc;
+  }
+  .aui-card-list-header.aui-card-list-user:nth-child(2n+1){
+    background: #fff;
+  }
+}
+
+
+
+
+
+
+
+
+.aui-dialog.aui-dialog-in {
+  opacity: 1;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transform: translate3d(0, -45%, 0) scale(1);
+  transform: translate3d(0, -45%, 0) scale(1);
+}
+
+.aui-mask{
+  opacity: 1;
+}
+
+
+
+
+
+
+

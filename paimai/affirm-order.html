@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>确认订单</title>
+    <!--在线字体图标-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_960899_s9d5c4srum8.css">
+    <link rel="stylesheet" href="aui/css/aui.css">
+    <link rel="stylesheet" href="aui/css/aui-slide.css">
+    <link rel="stylesheet" href="css/order.min.css">
+
+</head>
+<body>
+
+<div class="order">
+
+    <!--头部-->
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left aui-btn" onclick="history.back(-1)">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">确认订单</div>
+    </header>
+
+    <!--待支付-->
+    <div class="wait-pay">
+        <div class="title"><i class="iconfont icon-gantanhao"></i> 待付款</div>
+        <div>还需支付 ￥234.00</div>
+    </div>
+
+    <!--提示-->
+    <div class="timeover">
+        请在30分12秒 内完成支付，超时订单自动取消。
+    </div>
+
+    <!--没地址提示-->
+    <div class="aui-tips aui-list-item-arrow site-tips">
+        <i class="aui-iconfont aui-icon-info"></i>
+        <div class="aui-tips-title aui-ellipsis-1">还没收货地址，去添加</div>
+    </div>
+
+    <!--收货地址-->
+    <div class="aui-card-list">
+        <div class="aui-card-list-header delivery-address-title">收货地址</div>
+        <div class="aui-card-list-header aui-card-list-user aui-border-b">
+            <div class="aui-card-list-user-name">
+                <div>张三</div>
+                <small>13212341234</small>
+            </div>
+            <div class="aui-card-list-user-info">北京朝阳 光华路</div>
+        </div>
+    </div>
+
+    <!--商品列表-->
+    <div class="aui-content aui-margin-t-15">
+        <ul class="aui-list aui-media-list">
+            <!--商家名称-->
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner order-title">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title"><b>商家名称</b></div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="aui-list-item">
+                <!-- 第 1 个商品 -->
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/5.jpg">
+                    </div>
+                    <div class="aui-list-item-inner orderLi">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">全20册宝宝撕不烂早教卡 启蒙翻翻书0-3岁婴幼儿认知书籍启蒙早教卡片</div>
+                            <div class="aui-list-item-right">
+                                <p>￥123</p>
+                                x 1
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">备注</div>
+                    </div>
+                </div>
+
+                <!-- 第 2 个商品 -->
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="images/5.jpg">
+                    </div>
+                    <div class="aui-list-item-inner orderLi">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">全20册宝宝撕不烂早教卡 启蒙翻翻书0-3岁婴幼儿认知书籍启蒙早教卡片</div>
+                            <div class="aui-list-item-right">
+                                <p>￥123</p>
+                                x 1
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            备注
+                        </div>
+                    </div>
+                </div>
+
+                <!--运费-->
+                <div class="aui-card-list-footer aui-border-t">
+                    <div>运费</div>
+                    <div>￥0.00</div>
+                </div>
+
+                <!--优惠-->
+                <div class="aui-card-list-footer aui-border-t">
+                    <div>活动优惠</div>
+                    <div>￥0.00</div>
+                </div>
+
+                <!--价钱-->
+                <div class="aui-card-list-footer aui-border-t order-price">
+                    <div><span class="">还需支付</span></div>
+                    <div class="one-price aui-text-danger">￥256.00</div>
+                </div>
+
+            </li>
+
+        </ul>
+    </div>
+
+    <!--发票-->
+    <div class="aui-content aui-margin-t-15">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item">
+                <div class="aui-card-list-footer aui-border-t">
+                    <div>发票信息</div>
+                    <div>不开发票</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--信息-->
+    <div class="aui-content aui-margin-t-15">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item">
+                <div class="aui-card-list-footer">
+                    <div>订单编号</div>
+                    <div>2018120412533</div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-card-list-footer">
+                    <div>下单时间</div>
+                    <div>2018-12-04 12:53:23</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--按钮-->
+    <footer class="aui-bar aui-bar-tab">
+        <div class="aui-bar-tab-item">
+            <div class="aui-btn ">取消订单</div>
+            <div class="aui-btn aui-btn-warning">立即付款</div>
+        </div>
+    </footer>
+
+</div>
+
+
+</body>
+</html>

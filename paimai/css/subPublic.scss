@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+// 头部色系
+.aui-bar-nav{
+  //border-bottom: 1px solid #eee;
+  background-color: #014951;
+  color: #f9c754;
+  font-weight: bold;
+}
+
+.tr{
+  text-align: right;
+}
+
+a{
+  color: #039eb1;
+}
+
+.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked{
+  background-color: #039eb1;
+  border: solid 1px #039eb1;
+}
+
+.aui-tab-item.aui-active {
+  color: #039eb1;
+  border-bottom: 2px solid #039eb1;
+}
+
+.aui-mask-in{
+  z-index: 10;
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>新增收货地址</title>
+    <link rel="stylesheet" href="aui/css/aui.css">
+    <link rel="stylesheet" href="aui/css/aui-slide.css">
+    <link rel="stylesheet" href="css/site.min.css">
+</head>
+<body>
+
+<div class="add-site">
+
+    <!--头部-->
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left aui-btn" onclick="history.back(-1)">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">新增收货地址</div>
+    </header>
+
+    <!--填写、保存地址-->
+    <div class="aui-content aui-margin-b-15">
+
+        <ul class="aui-list aui-form-list ">
+
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">收货人</div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="请输入收货人姓名">
+                    </div>
+                </div>
+            </li>
+
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">联系电话</div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="请输入联系电话">
+                    </div>
+                </div>
+            </li>
+
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">省市区</div>
+                    <div class="aui-list-item-input aui-list-item-arrow">
+                        <select>
+                            <option>请选择</option>
+                            <option>上海</option>
+                            <option>北京</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">详细地址</div>
+                    <div class="aui-list-item-input">
+                        <textarea placeholder="请输入详细地址" autocomplete="off"></textarea>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+        <!--按钮-->
+        <div class="aui-content-padded">
+            <div class="aui-btn aui-btn-warning aui-btn-block aui-btn-sm" onclick="history.back(-1) ">保存</div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
