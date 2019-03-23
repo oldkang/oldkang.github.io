@@ -1,0 +1,32 @@
+
+
+
+.header{
+
+  .ivu-menu-light{
+    background: none;
+  }
+}
+
+.pageWidth{
+  width: 1360px;
+  margin: auto;
+}
+.indexL{
+  width: 820px;
+}
+.indexR{
+  width: 496px;
+
+  .ivu-tabs-nav {
+    //display: table;
+    width: 100%;
+
+    .ivu-tabs-tab{
+      //display: table-cell;
+      //margin-right: 0;
+      text-align: center;
+    }
+
+  }
+}

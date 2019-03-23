@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+$main-color:#2787F4;
+
+ul,li{
+  list-style: none;
+}
+
+.pageWidth{
+  width: 1360px;
+  margin: auto;
+}
+.text-overflow{
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.show{
+  display: block !important;
+}
+.hide{
+  display: none;
+}
+.bg1{
+  background: #f4f4f4;
+}
+.bg2{
+  background: #EAEAEA;
+}
+input{outline:none;}
+@mixin border-radius( $radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($x ,$y ,$px ,$color){
+  -webkit-box-shadow: $x $y $px  $color;
+  -moz-box-shadow: $x $y $px  $color;
+  box-shadow: $x $y $px  $color;
+}
+.pt72{
+  padding-top: 72px;
+}
+.ivu-page-item-active{
+  background: $main-color;
+
+  a{
+    color: #fff;
+  }
+}
+.ivu-breadcrumb-item-link{
+  color: $main-color;
+}
+.ivu-page-item{
+  border: none !important;
+}
+.ivu-page-next, .ivu-page-prev{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.ivu-tag{
+  background: none;
+}
+.loadMore{
+  width:830px;
+  line-height:50px;
+  background:rgba(244,244,244,1);
+  font-size:17px;
+  font-weight:400;
+  color:rgba(53,163,247,1);
+  margin:50px auto 0;
+  text-align: center;
+  cursor: pointer;
+}
+.gray{
+
+  .ivu-page-item ,.ivu-page-next, .ivu-page-prev{
+    background: #f4f4f4;
+
+    &:hover{
+      background: #2787F4;
+      color: #fff;
+
+      a,a:hover{
+        color: #fff;
+      }
+    }
+  }
+  .ivu-page-disabled{
+
+    &:hover{
+      background: #f4f4f4;
+
+      a,a:hover{
+        color: #ccc;
+      }
+
+    }
+  }
+  .ivu-page-item-active {
+    background: #2787F4;
+  }
+}
+
+.message{
+  font-size:17px;
+  padding-right: 120px;
+  position: relative;
+
+  p{
+    height:50px;
+    background:rgba(244,244,244,1);
+
+    input{
+      width: 100%;
+      border: none;
+      padding:0 16px;
+      background: none;
+      line-height: 50px;
+    }
+  }
+  a{
+    width:120px;
+    line-height:50px;
+    background:rgba(39,135,244,1);
+    display: inline-block;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+
+// 按钮 通用
+.btn_green{
+  background: #44C41C !important;
+}
+.btn_blue{
+
+  button{
+    background:rgba(39,135,244,1);
+  }
+}
+.btn_public{
+
+  button{
+    border: none;
+    line-height:44px;
+    width: 100%;
+    color: #fff;
+  }
+
+  &.btn_big{
+    font-size: 30px;
+
+    button {
+      line-height: 60px;
+    }
+  }
+}
+
+// 弹框 通用
+
+// 黑色背景色
+.popBg_public{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background:rgba(87,87,87,.8);
+  z-index: 900;
+}
+// 提示条
+.popTip_public{
+  width:602px;
+  height:148px;
+  background:rgba(23,24,27,.7);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  padding: 25px;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 901;
+  color: #fff;
+}
+// 有内容区域
+.popContent_public{
+  min-width:660px;
+  background:rgba(255,255,255,1);
+  @include border-radius(12px);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 901;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  min-height: 100px;
+
+  .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+}
+
+
