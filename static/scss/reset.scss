@@ -1,0 +1,65 @@
+@charset "utf-8";
+body,blockquote,button,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,fieldset,legend,input,li,ol,p,pre,td,textarea,th,ul {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+	min-height: 100vh;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+table {
+	font-size: inherit;
+}
+input,
+select,
+textarea {
+	font-family: arial, helvetica, clean, sans-serif;
+	font-size: 100%;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+}
+button {
+	overflow: visible;
+}
+th,em,address,cite {
+	font-style: normal;
+	font-weight: normal;
+}
+li {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+}
+img ,fieldset{
+	border: 0 none;
+}
+ins {
+	text-decoration: none;
+}
+* {
+	outline: none;
+	touch-action: pan-y;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* 谷歌 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+/* 火狐 */
+input {
+	-moz-appearance: textfield;
+}

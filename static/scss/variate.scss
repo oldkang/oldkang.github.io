@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+// 变量颜色；
+$blue1: #5b92ff;
+$blue2: #4b82ff;
+$blue3: #018cea;
+
+$red1: #f16e6c;
+$red2: #ff3c39;
+$red3: #f22b28;
+$red4: #7a181d;
+
+$green1: #00c25f;
+$green2: #4bc065;
+
+$yellow1: #ff9000;
+$yellow2: #f79946;
+$yellow3: #fe772e;
+
+$golden1: #ecd6b1;
+$golden2: #dabf8e;
+$golden3: #c4a473;
+$golden4: #c9a15f;
+
+$gray1: #f9f9f9;
+$gray2: #999999;
+$gray3: #2e2516;
+
+// px 转 rem 比例
+@function px2rem($nub) {
+	@return $nub/100 + rem;
+}
+
+// vw 置换 ,css 适配不同设备，不兼容字体大小；
+@function vw($w) {
+	@return $w/750 * 100vw;
+}
+
+// 阴影;
+@mixin box-shadow($x, $y, $px, $color) {
+	-webkit-box-shadow: $x $y $px $color;
+	-moz-box-shadow: $x $y $px $color;
+	box-shadow: $x $y $px $color;
+}
+
+// 圆角;
+@mixin border-radius($px) {
+	-webkit-border-radius: $px;
+	-moz-border-radius: $px;
+	border-radius: $px;
+}
+@mixin border-radius-each($lt,$rt,$rb,$lb) {
+	-webkit-border-radius: $lt $rt $rb $lb;
+	-moz-border-radius: $lt $rt $rb $lb;
+	border-radius: $lt $rt $rb $lb;
+}
+
+// 图标
+@mixin icon($w, $h, $img) {
+	width: $w;
+	height: $h;
+	background: url('../images/'+$img) no-repeat;
+	background-size: contain;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// 超出几行 显示 3点；
+@mixin text-overflow-ellipsis($n) {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	white-space: normal !important;
+	-webkit-line-clamp: $n;
+	-webkit-box-orient: vertical;
+}
+
+// 渐变 上-下
+@mixin gradient_tb($color1, $color2) {
+	background: $color1;
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+	background: -webkit-linear-gradient(top, $color1 0%, $color2 100%);
+	background: linear-gradient(to bottom, $color1 0%, $color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+}
+
+// 渐变背景色--左右；
+@mixin gradient_lr($color1, $color2) {
+	background: $color1;
+	background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
+	background: -webkit-linear-gradient(left, $color1 0%, $color2 100%);
+	background: linear-gradient(to right, $color1 0%, $color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 );
+}
