@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>菜单</title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<style>
+			body{font-size:14px;margin: 20px;padding: 0;}
+			.page{margin-left:auto;margin-right:auto;max-width:929px;border: 1px solid #ccc;min-height: calc(100vh - 40px);position: relative;}
+			header{background-color: #f5f5f5;text-align: center;line-height: 3;font-size: 18px;font-weight: bold;border-bottom: 1px solid #e5e3e3;}
+			.content{padding:0 20px;}
+			.total{font-size: 14px;color: #9b9999;font-weight: normal;}
+			.tab{padding:20px 0;margin: 0;}
+			.tab li{padding:5px 0;list-style: none; border-bottom:1px solid rgb(167 167 167 / 30%);position: relative;padding-left: 80px;}
+			.tab b{display:inline-block;width:80px;position: absolute;left: 0;}
+			.tab label{margin-right:20px;width:80px;display:inline-block}
+			.list{border-left:1px dotted #ccc;line-height:2.3;display:inline-block}
+			.list span{display:inline-block;padding:0 5px;border-right:1px dotted #ccc;border-bottom:1px dotted #ccc;border-top:1px dotted #ccc;width:99px;text-align:center;background-color:#f5f5f5;margin-bottom: -1px;}
+			.list span:hover{background-color: #efefef;cursor: pointer;}
+			.list span.active{background-color:#e1070c;color:#fff}
+			.fixedBottom{position: absolute;left: 0;right: 0;bottom: 0;padding: 10px;border-top:1px dotted #ccc;line-height: 1.5;}
+			.fixedBottom span{float: right;}
+			.red{color: red;}
+		</style>
+	</head>
+	<body>
+		<div id="myPage">
+			<div class="page">
+				<header>家庭菜单 <span class="total">[共{{list.length}}个菜名]</span></header>
+				<div class="content">
+					<ul class="tab">
+						<li>
+							<b>菜系：</b>
+							<label> <input type="radio" name="name1" value="all" @input="change($event)" checked>全部</label>
+							<label> <input type="radio" name="name1" value="荤菜" @input="change($event)">荤菜 </label>
+							<label> <input type="radio" name="name1" value="素菜" @input="change($event)">素菜 </label>
+							<label> <input type="radio" name="name1" value="汤菜" @input="change($event)">汤菜 </label>
+							<label> <input type="radio" name="name1" value="凉拌菜" @input="change($event)">凉拌菜 </label>
+						</li>
+						<li>
+							<b>个人喜好：</b>
+							<label> <input type="radio" name="name1" value="m" @input="change($event)">M </label>
+							<label> <input type="radio" name="name1" value="f" @input="change($event)">F </label>
+							<label> <input type="radio" name="name1" value="o" @input="change($event)">O </label>
+							<label> <input type="radio" name="name1" value="k" @input="change($event)">K </label>
+						</li>
+					</ul>
+					
+					<div class="list">
+						<span v-for="(l,idx) in list" @click="chooseIdx(idx)" :class="{active:l.active}">{{l.name}}</span>
+					</div>
+				</div>
+				<div class="fixedBottom" v-if="chooseData.length">
+					<b v-for="(c,idx) in chooseData">{{c}}、</b>
+					<span>总共 <b class="red">{{chooseData.length}}</b> 个菜</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.1/jquery.min.js"></script> -->
+		<script>
+			Array.prototype.indexOf = function(val) {
+				for (var i = 0; i < this.length; i++) {
+					if (this[i] == val) return i;
+				}
+				return -1;
+			};
+			Array.prototype.remove = function(val) {
+				var index = this.indexOf(val);
+				if (index > -1) {
+					this.splice(index, 1);
+				}
+			};
+			
+			var that;
+			var comName = new Vue({
+				el: "#myPage",
+				data: {
+					list: [],
+					recipe: [],
+					meat:[
+						{name: '红烧肉',label: '荤菜'},
+						{name: '小鸡炖蘑菇',label: '荤菜'},
+						{name: '啤酒鸭',label: '荤菜'},
+						{name: '红烧鱼',label: '荤菜'},
+						{name: '蛋饺',label: '荤菜'},
+						{name: '红烧排骨',label: '荤菜'},
+						{name: '猪脚',label: '荤菜'},
+						{name: '辣椒炒肉',label: '荤菜'},
+						{name: '粉蒸肉',label: '荤菜'},
+						{name: '牙签牛肉',label: '荤菜'},
+						{name: '猪血丸子',label: '荤菜'},
+						{name: '香肠',label: '荤菜'},
+						{name: '腊肉',label: '荤菜'},
+					],
+					plain:[
+						{name: '肉沫茄子',label: '素菜'},
+						{name: '佛手瓜清炒',label: '素菜'},
+						{name: '藠头',label: '素菜'},
+						{name: '藕片',label: '素菜'},
+						{name: '红萝卜',label: '素菜'},
+						{name: '苦瓜',label: '素菜'},
+						{name: '南瓜藤',label: '素菜'},
+						{name: '芹菜',label: '素菜'},
+						{name: '土豆丝',label: '素菜'},
+						{name: '外婆菜',label: '素菜'},
+						{name: '油茄',label: '素菜'},
+						{name: '榨菜',label: '素菜'},
+						{name: '牛津豆腐',label: '素菜'},
+					],
+					leaves:[
+						{name: '白菜',label: '汤菜'},
+						{name: '玉米',label: '汤菜'},
+						{name: '金针菇',label: '汤菜'},
+						{name: '冬瓜',label: '汤菜'},
+						{name: '包菜',label: '汤菜'},
+						{name: '空心菜',label: '汤菜'},
+						{name: '菠菜',label: '汤菜'},
+						{name: '茼蒿',label: '汤菜'},
+						{name: '寒菜',label: '汤菜'},
+					],
+					salad:[
+						{name: '拍黄瓜',label: '凉拌菜'},
+						{name: '凉拌木耳',label: '凉拌菜'},
+						{name: '腐竹',label: '凉拌菜'},
+						{name: '皮蛋',label: '凉拌菜'},
+					],
+					choose: 'all',
+					chooseData:[]
+				},
+				created() {
+					that = this;
+					
+					// 合并俩种菜单；
+					var m = this.addStatus(this.meat), p = this.addStatus(this.plain), l = this.addStatus(this.leaves), s = this.addStatus(this.salad);
+					this.list = this.recipe = m.concat(p).concat(l).concat(s);
+				},
+				methods: {
+					// 添加未选中的状态；
+					addStatus(data){
+						for (var i=0,len=data.length;i<len;i++) {
+							data[i].active = false;
+						}
+						return data;
+					},
+					// 选中菜单；
+					chooseIdx(idx){
+						if(this.list[idx].active){
+							this.chooseData.remove(this.list[idx].name);
+						}else{
+							this.chooseData.push(this.list[idx].name);
+						}
+						this.list[idx].active = !this.list[idx].active;
+					},
+					// 切换选项；筛选对应菜单；
+					change(e) {
+						this.choose = e.target.defaultValue;
+						if (this.choose == 'all') {
+							this.list = this.recipe;
+						} else {
+							this.list = this.recipe.filter(this.has);
+						}
+					},
+					// 是否存在这个菜名；
+					has(lab) {
+						return lab.label.indexOf(this.choose) != -1;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
