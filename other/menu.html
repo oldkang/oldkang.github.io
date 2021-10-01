@@ -4,23 +4,25 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>菜单</title>
+		<title>家庭菜谱</title>
+		<script>! function(e, t) { var n = t.documentElement, d = e.devicePixelRatio || 1; function i() { var ck = n.clientWidth > 750 ? 750 : n.clientWidth; var e = ck / 3.75 / 2; n.style.fontSize = e + "px" } if (function e() { t.body ? t.body.style.fontSize = "16px" : t.addEventListener("DOMContentLoaded", e) }(), i(), e.addEventListener("resize", i), e.addEventListener("pageshow", function(e) { e.persisted && i() }), 2 <= d) { var o = t.createElement("body"), a = t.createElement("div"); a.style.border = ".5px solid transparent", o.appendChild(a), n.appendChild(o), 1 === a.offsetHeight && n .classList.add("hairlines"), n.removeChild(o) } }(window, document) </script>
 		<script src="https://unpkg.com/vue/dist/vue.js"></script>
 		<style>
-			body{font-size:14px;margin: 20px;padding: 0;}
-			.page{margin-left:auto;margin-right:auto;max-width:929px;border: 1px solid #ccc;min-height: calc(100vh - 40px);position: relative;border-radius: 5px;overflow: hidden;}
+			body{font-size: 0.14rem;margin: 0.2rem;padding: 0;}
+			.page{margin-left:auto;margin-right:auto;max-width:929px;border: 1px solid #ccc;min-height: calc(100vh - 0.4rem);position: relative;border-radius: 0.05rem;overflow: hidden;}
 			header{background-color: #f5f5f5;text-align: center;line-height: 3;font-size: 18px;font-weight: bold;border-bottom: 1px solid #e5e3e3;}
-			.content{padding:0 20px;}
-			.total{font-size: 14px;color: #9b9999;font-weight: normal;}
-			.tab{padding:20px 0;margin: 0;}
-			.tab li{padding:5px 0;list-style: none; border-bottom:1px solid rgb(167 167 167 / 30%);position: relative;padding-left: 80px;display:flex;align-items:center;flex-wrap: wrap;}
-			.tab b{display:inline-block;width:80px;position: absolute;left: 0;}
-			.tab label{margin-right:20px;width:80px;display:flex;align-items:center;}
+			.content{padding:0 0.2rem;}
+			.total{font-size: 0.14rem;color: #9b9999;font-weight: normal;}
+			.tab{padding:0.2rem 0;margin: 0;}
+			.tab li{padding:0.05rem 0;list-style: none; border-bottom:1px solid rgb(167 167 167 / 30%);position: relative;padding-left: 2rem;display:flex;align-items:center;flex-wrap: wrap;}
+			.tab b{display:inline-block;width:2rem;position: absolute;left: 0;}
+			.tab label{margin-right:0.2rem;width:2rem;display:flex;align-items:center;}
+			.tab span{text-transform: uppercase;}
 			.list{border-left:1px dotted #ccc;line-height:2.3;display:inline-block}
-			.list span{display:inline-block;padding:0 5px;border-right:1px dotted #ccc;border-bottom:1px dotted #ccc;border-top:1px dotted #ccc;width:99px;text-align:center;background-color:#f5f5f5;margin-bottom: -1px;}
+			.list span{display:inline-block;padding:0 0.05rem;border-right:1px dotted #ccc;border-bottom:1px dotted #ccc;border-top:1px dotted #ccc;width:2rem;text-align:center;background-color:#f5f5f5;margin-bottom: -1px;}
 			.list span:hover{background-color: #efefef;cursor: pointer;}
 			.list span.active{background-color:#e1070c;color:#fff}
-			.fixedBottom{position: absolute;left: 0;right: 0;bottom: 0;padding: 10px;border-top:1px dotted #ccc;line-height: 1.5;}
+			.fixedBottom{position: absolute;left: 0;right: 0;bottom: 0;padding: 0.1rem;border-top:1px dotted #ccc;line-height: 1.5;}
 			.fixedBottom span{float: right;}
 			.red{color: red;}
 		</style>
@@ -28,23 +30,17 @@
 	<body>
 		<div id="myPage">
 			<div class="page">
-				<header>家庭菜单 <span class="total">[共{{list.length}}个菜名]</span></header>
+				<header>家庭菜谱 <span class="total">[共{{list.length}}个菜名]</span></header>
 				<div class="content">
 					<ul class="tab">
 						<li>
 							<b>菜系：</b>
 							<label><input type="radio" name="name1" value="all" @input="change($event)" checked><span>全部</span></label>
-							<label><input type="radio" name="name1" value="荤菜" @input="change($event)"><span>荤菜</span></label>
-							<label><input type="radio" name="name1" value="素菜" @input="change($event)"><span>素菜</span></label>
-							<label><input type="radio" name="name1" value="汤菜" @input="change($event)"><span>汤菜</span></label>
-							<label><input type="radio" name="name1" value="凉拌菜" @input="change($event)"><span>凉拌菜</span></label>
+							<label v-for="n in menu"> <input type="radio" name="name1" :value="n" @input="change($event)"><span>{{n}}</span></label>
 						</li>
 						<li>
 							<b>个人喜好：</b>
-							<label> <input type="radio" name="name1" value="m" @input="change($event)">M </label>
-							<label> <input type="radio" name="name1" value="f" @input="change($event)">F </label>
-							<label> <input type="radio" name="name1" value="o" @input="change($event)">O </label>
-							<label> <input type="radio" name="name1" value="k" @input="change($event)">K </label>
+							<label v-for="n in name"> <input type="radio" name="name1" :value="n" @input="change($event)"><span>{{n}}</span></label>
 						</li>
 					</ul>
 					
@@ -59,7 +55,6 @@
 			</div>
 		</div>
 
-		<!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.1/jquery.min.js"></script> -->
 		<script>
 			Array.prototype.indexOf = function(val) {
 				for (var i = 0; i < this.length; i++) {
@@ -78,10 +73,12 @@
 			var comName = new Vue({
 				el: "#myPage",
 				data: {
+					name:['m','f','o','k'],
+					menu:['荤菜','素菜','汤菜','凉拌菜'],
 					list: [],
 					recipe: [],
 					meat:[
-						{name: '红烧肉',label: '荤菜'},
+						{name: '红烧肉',label: '荤菜,m'},
 						{name: '小鸡炖蘑菇',label: '荤菜'},
 						{name: '啤酒鸭',label: '荤菜'},
 						{name: '红烧鱼',label: '荤菜'},
@@ -163,7 +160,7 @@
 							this.list = this.recipe.filter(this.has);
 						}
 					},
-					// 是否存在这个菜名；
+					// 是否存在这个单词；
 					has(lab) {
 						return lab.label.indexOf(this.choose) != -1;
 					}
